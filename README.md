@@ -41,6 +41,10 @@
     <td width="50%"><a href="https://github.com/ManuRomera/mr-telegram"><img src="https://raw.githubusercontent.com/ManuRomera/mr-telegram/main/docs/img/banner.png" alt="M.R.- Telegram" width="100%"></a></td>
     <td width="50%"><a href="https://github.com/ManuRomera/translation-spanish-daggerheart"><img src="https://raw.githubusercontent.com/ManuRomera/translation-spanish-daggerheart/main/docs/img/banner.png" alt="Daggerheart ES" width="100%"></a></td>
   </tr>
+  <tr>
+    <td width="50%"><a href="https://github.com/ManuRomera/mr-standee-portrait"><img src="https://raw.githubusercontent.com/ManuRomera/mr-standee-portrait/main/docs/img/banner.png" alt="MR- Standee Portrait" width="100%"></a></td>
+    <td width="50%"><a href="https://github.com/ManuRomera/mr-token-stage"><img src="https://raw.githubusercontent.com/ManuRomera/mr-token-stage/main/docs/img/banner.png" alt="MR Token Stage" width="100%"></a></td>
+  </tr>
 </table>
 
 ---
@@ -110,7 +114,7 @@ Sistema propio alrededor de clubes moteros, comunidad, dones, motos, generadores
 
 | Proyecto | Tipo |
 | :--- | :--- |
-| **[Standee Portrait](https://github.com/ManuRomera/standee-portrait)** | Presentación visual de personajes y tokens |
+| **[MR- Standee Portrait](https://github.com/ManuRomera/mr-standee-portrait)** | Presentación visual de personajes y tokens |
 | **[RP Accessibility](https://github.com/ManuRomera/rp-accessibility)** | Herramientas de accesibilidad |
 | **[CAMC Persecuciones](https://github.com/ManuRomera/camc-persecuciones)** | Herramientas para persecuciones |
 | **[PBPE Exportador](https://github.com/ManuRomera/pbpe-exportador)** | Exportación y utilidades |
