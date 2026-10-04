@@ -29,6 +29,18 @@
     <td width="50%"><a href="https://github.com/ManuRomera/mr-entre-ruinas"><img src="https://raw.githubusercontent.com/ManuRomera/mr-entre-ruinas/main/docs/img/banner.png" alt="Entre Ruinas" width="100%"></a></td>
     <td width="50%"><a href="https://github.com/ManuRomera/grimwild-es"><img src="https://raw.githubusercontent.com/ManuRomera/grimwild-es/main/docs/img/banner.png" alt="Grimwild en castellano" width="100%"></a></td>
   </tr>
+  <tr>
+    <td width="50%"><a href="https://github.com/ManuRomera/eterno-azul-foundry"><img src="https://raw.githubusercontent.com/ManuRomera/eterno-azul-foundry/main/assets/ea-github-hero.webp" alt="Eterno Azul" width="100%"></a></td>
+    <td width="50%"><a href="https://github.com/ManuRomera/mr-story-night"><img src="https://raw.githubusercontent.com/ManuRomera/mr-story-night/main/assets/art/story-room-cover.webp" alt="MR · Story Night" width="100%"></a></td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="https://github.com/ManuRomera/cuervos-de-asgard-mc"><img src="https://raw.githubusercontent.com/ManuRomera/cuervos-de-asgard-mc/main/docs/screenshots/banner.png" alt="Cuervos de Asgard MC" width="100%"></a></td>
+    <td width="50%"><a href="https://github.com/ManuRomera/camc-persecuciones"><img src="https://raw.githubusercontent.com/ManuRomera/camc-persecuciones/main/docs/img/banner.png" alt="CAMC Persecuciones" width="100%"></a></td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="https://github.com/ManuRomera/mr-telegram"><img src="https://raw.githubusercontent.com/ManuRomera/mr-telegram/main/docs/img/banner.png" alt="M.R.- Telegram" width="100%"></a></td>
+    <td width="50%"><a href="https://github.com/ManuRomera/translation-spanish-daggerheart"><img src="https://raw.githubusercontent.com/ManuRomera/translation-spanish-daggerheart/main/docs/img/banner.png" alt="Daggerheart ES" width="100%"></a></td>
+  </tr>
 </table>
 
 ---
