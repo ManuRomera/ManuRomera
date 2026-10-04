@@ -18,6 +18,21 @@
 
 ---
 
+## 🖼️ Un vistazo
+
+<table>
+  <tr>
+    <td width="50%"><a href="https://github.com/ManuRomera/ocho-lanzas"><img src="https://raw.githubusercontent.com/ManuRomera/ocho-lanzas/main/docs/img/banner.png" alt="Ocho Lanzas" width="100%"></a></td>
+    <td width="50%"><a href="https://github.com/ManuRomera/ruido-blanco"><img src="https://raw.githubusercontent.com/ManuRomera/ruido-blanco/main/docs/img/banner.png" alt="Ruido Blanco" width="100%"></a></td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="https://github.com/ManuRomera/mr-entre-ruinas"><img src="https://raw.githubusercontent.com/ManuRomera/mr-entre-ruinas/main/docs/img/banner.png" alt="Entre Ruinas" width="100%"></a></td>
+    <td width="50%"><a href="https://github.com/ManuRomera/grimwild-es"><img src="https://raw.githubusercontent.com/ManuRomera/grimwild-es/main/docs/img/banner.png" alt="Grimwild en castellano" width="100%"></a></td>
+  </tr>
+</table>
+
+---
+
 ## 🎭 La familia MR
 
 Últimamente estoy llevando muchas de las ideas que nacen en mesa un paso más allá: no solo adaptar reglas, sino construir **experiencias completas alrededor de la partida**.
@@ -29,6 +44,8 @@
 | 📻 **[MR · La Última Emisión](https://github.com/ManuRomera/mr-la-ultima-emision)** | Una emisora de radio interactiva y agnóstica de sistema. Locutor, oyentes, llamadas privadas, emisión pública sincronizada y overlay sobre la escena. **[Página del proyecto](https://manuromera.github.io/mr-la-ultima-emision/)** |
 | ✉️ **[M.R. Telegram](https://github.com/ManuRomera/mr-telegram)** | Comunicación privada integrada en Foundry: mensajería, telegramas, cartas, terminales, adjuntos, tiradas secretas, estados de lectura y escritura concurrente real. |
 | 🧱 **[MR · Entre Ruinas](https://github.com/ManuRomera/mr-entre-ruinas)** | Sistema para Foundry 13/14 del juego narrativo de MIDRA. Sin director fijo, Voz rotatoria, refugios, comunidades, crisis, oráculos y herramientas de campaña. |
+| 🎙️ **[MR · Chronicle](https://github.com/ManuRomera/mr-chronicle)** | Graba tu partida de Foundry como pistas de audio por persona, con transcripción y recuerdos. Cada jugador graba en su navegador. |
+| 🕯️ **[MR · Cuentos de Ánimas](https://github.com/ManuRomera/mr-cuentos-de-animas)** | Una caja de relatos malditos convertida en sistema para Foundry 13/14: cartas sobre madera, piedras de Espíritu y un modo íntimo 1 + 1. |
 
 <p align="center">
   <strong>MR no es una colección de botones: intento que cada herramienta tenga identidad, intención y una forma propia de integrarse en la ficción.</strong>
