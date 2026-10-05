@@ -2,7 +2,12 @@
   <img src="./banner.png" alt="Manu Romera · Foundry VTT, sistemas, módulos y herramientas para jugar mejor" width="100%" />
 </p>
 
-<h1 align="center">Manu Romera</h1>
+<h1 align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="brand/MR_11_Formal_Marfil_Transparente.png">
+    <img src="brand/MR_08_Formal_Negro_Transparente.png" alt="Manu Romera · Digital RPG Design" width="360">
+  </picture>
+</h1>
 
 <p align="center">
   <strong>Diseño experiencias para Foundry VTT donde la tecnología intenta desaparecer detrás de la partida.</strong><br>
