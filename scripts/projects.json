@@ -1,0 +1,358 @@
+[
+ {
+  "repo": "mr-un-momento-unico",
+  "title": "Un momento único",
+  "tagline": "Dos samuráis, un duelo y todo lo que los condujo hasta él.",
+  "accent": "#b3202a",
+  "art": "assets/art/brand/cover.webp",
+  "mode": "full",
+  "focus": [
+   0.5,
+   0.45
+  ]
+ },
+ {
+  "repo": "mr-cuentos-de-animas",
+  "title": "Cuentos de Ánimas",
+  "tagline": "Una caja de relatos malditos: cartas sobre madera y piedras de Espíritu.",
+  "accent": "#e39a45",
+  "art": "assets/branding/cover.webp",
+  "mode": "full",
+  "focus": [
+   0.5,
+   0.5
+  ]
+ },
+ {
+  "repo": "mr-bruja",
+  "title": "Bruja",
+  "tagline": "Una vieja bruja, una heredera por encontrar y cinco velas que se apagan.",
+  "accent": "#9a4f86",
+  "art": "assets/art/brand/cover.webp",
+  "mode": "full",
+  "focus": [
+   0.5,
+   0.5
+  ]
+ },
+ {
+  "repo": "mr-nosotras-las-brujas",
+  "title": "Nosotras, las brujas",
+  "tagline": "Siete horas de oración, una Jueza y la sospecha entre Hermanas.",
+  "accent": "#a02a48",
+  "art": "assets/portadas/portada.webp",
+  "mode": "full",
+  "focus": [
+   0.5,
+   0.4
+  ]
+ },
+ {
+  "repo": "brindlewood-bay-foundry",
+  "title": "Brindlewood Bay",
+  "tagline": "El club de las Expertas del Crimen, en castellano.",
+  "accent": "#d98fa8",
+  "art": "docs/cover.jpg",
+  "mode": "right",
+  "focus": [
+   0.5,
+   0.4
+  ]
+ },
+ {
+  "repo": "trueque-noir",
+  "title": "Trueque Noir",
+  "tagline": "Investigación noir inspirada en Balada triste de la ciudad.",
+  "accent": "#c9a35c",
+  "art": "assets/scenes/noir.webp",
+  "mode": "full",
+  "focus": [
+   0.5,
+   0.5
+  ]
+ },
+ {
+  "repo": "ocho-lanzas",
+  "title": "Ocho Lanzas",
+  "tagline": "El mundo visible es solamente una parte de lo que existe.",
+  "accent": "#b3262a",
+  "art": "assets/images/scenes/01-shimokawa-llegada.png",
+  "mode": "full",
+  "focus": [
+   0.5,
+   0.5
+  ]
+ },
+ {
+  "repo": "grimwild-es",
+  "title": "Grimwild en castellano",
+  "tagline": "Traducción no oficial para Foundry VTT.",
+  "accent": "#d8a657",
+  "art": "assets/grimwild-system-splash.webp",
+  "mode": "full",
+  "focus": [
+   0.5,
+   0.4
+  ]
+ },
+ {
+  "repo": "ruido-blanco",
+  "title": "Ruido Blanco",
+  "tagline": "Las pistas son reales. Su significado, interpretable.",
+  "accent": "#d8a657",
+  "art": "docs/img/banner.png",
+  "mode": "right",
+  "crop": [
+   0.52,
+   0,
+   1,
+   1
+  ]
+ },
+ {
+  "repo": "cuervos-de-asgard-mc",
+  "title": "Cuervos de Asgard MC",
+  "tagline": "Clubes moteros, comunidad, dones y motos.",
+  "accent": "#c0392b",
+  "art": "assets/ui/system-cover.png",
+  "mode": "right",
+  "focus": [
+   0.5,
+   0.5
+  ]
+ },
+ {
+  "repo": "camc-persecuciones",
+  "title": "CAMC Persecuciones",
+  "tagline": "Control visual de persecuciones para Cuervos de Asgard MC.",
+  "accent": "#e8743b",
+  "art": "docs/img/banner.png",
+  "crop": [
+   0.46,
+   0,
+   1,
+   1
+  ],
+  "mode": "right",
+  "region": 0.46
+ },
+ {
+  "repo": "mr-entre-ruinas",
+  "title": "Entre Ruinas",
+  "tagline": "Sobrevivir no es lo mismo que seguir adelante.",
+  "accent": "#d8a31f",
+  "art": "docs/img/banner.png",
+  "crop": [
+   0.45,
+   0,
+   1,
+   1
+  ],
+  "mode": "right"
+ },
+ {
+  "repo": "mr-story-night",
+  "title": "Story Night",
+  "tagline": "Una mesa sin director para jugar a Follow.",
+  "accent": "#7b5fd0",
+  "art": "assets/art/story-room-cover.webp",
+  "mode": "full",
+  "focus": [
+   0.5,
+   0.5
+  ]
+ },
+ {
+  "repo": "mr-telegram",
+  "title": "M.R.- Telegram",
+  "tagline": "Mensajería privada para cualquier sistema.",
+  "accent": "#1fa67a",
+  "art": "docs/img/banner.png",
+  "crop": [
+   0.55,
+   0,
+   1,
+   1
+  ],
+  "mode": "right",
+  "region": 0.46
+ },
+ {
+  "repo": "mr-token-stage",
+  "title": "MR Token Stage",
+  "tagline": "Escala, halo y dirección de tokens en vivo.",
+  "accent": "#4ac0e8",
+  "art": "docs/img/banner.png",
+  "crop": [
+   0.5,
+   0,
+   1,
+   1
+  ],
+  "mode": "right"
+ },
+ {
+  "repo": "mr-standee-portrait",
+  "title": "MR- Standee Portrait",
+  "tagline": "El retrato de cada personaje, de cuerpo entero, junto a su ficha.",
+  "accent": "#4a63c8",
+  "art": "docs/img/banner.png",
+  "crop": [
+   0.55,
+   0,
+   1,
+   1
+  ],
+  "mode": "right"
+ },
+ {
+  "repo": "mr-chronicle",
+  "title": "MR · Chronicle",
+  "tagline": "Graba tu partida como podcast multipista y transcríbela.",
+  "accent": "#e0533d",
+  "art": "docs/imagenes/portada.png",
+  "mode": "full",
+  "focus": [
+   0.5,
+   0.5
+  ]
+ },
+ {
+  "repo": "mr-la-ultima-emision",
+  "title": "La Última Emisión",
+  "tagline": "Una emisora de radio interactiva para cualquier sistema.",
+  "accent": "#e8b04a",
+  "art": "docs/img/consola.png",
+  "mode": "right",
+  "region": 0.46
+ },
+ {
+  "repo": "imserso-to-the-limit",
+  "title": "IMSERSO to the limit",
+  "tagline": "Fichas, yayopoints, achaques y el panel del Sr. Ministro.",
+  "accent": "#e07a2f",
+  "art": "docs/img/ministro.jpg",
+  "mode": "right",
+  "region": 0.46
+ },
+ {
+  "repo": "los-abuelos-de-la-justicia",
+  "title": "Los Abuelos de la Justicia",
+  "tagline": "Una aventura para IMSERSO to the limit.",
+  "accent": "#e07a2f",
+  "art": "assets/cover/Los_Abuelos_de_la_Justicia.webp",
+  "mode": "full",
+  "focus": [
+   0.5,
+   0.82
+  ]
+ },
+ {
+  "repo": "ysystem3-srd",
+  "title": "Ysystem3 SRD",
+  "tagline": "Fichas, tiradas, combate, pánico y persecuciones.",
+  "accent": "#d1a21c",
+  "art": "assets/cover-srd-actualizado.png",
+  "mode": "right",
+  "focus": [
+   0.5,
+   0.5
+  ]
+ },
+ {
+  "repo": "ol-attack",
+  "title": "OL Attack",
+  "tagline": "Ataque, daño y rasgos de D&D 5e en un solo clic.",
+  "accent": "#c0392b",
+  "art": "docs/img/ventana-principal.png",
+  "mode": "right",
+  "region": 0.46
+ },
+ {
+  "repo": "eterno-azul-foundry",
+  "title": "Eterno Azul",
+  "tagline": "Aventura y navegación celeste para Foundry VTT.",
+  "accent": "#3a8fd8",
+  "art": "assets/ea-github-hero.webp",
+  "mode": "full",
+  "focus": [
+   0.5,
+   0.5
+  ]
+ },
+ {
+  "repo": "mausritter-damage-helper",
+  "title": "Mausritter Damage Helper",
+  "tagline": "Daño, armadura, críticos y usos sin hoja de cálculo.",
+  "accent": "#8fbf4a",
+  "art": "assets/cover.png",
+  "mode": "full",
+  "focus": [
+   0.5,
+   0.5
+  ]
+ },
+ {
+  "repo": "mausritter-wdip",
+  "title": "Mausritter · We Deal in Pips",
+  "tagline": "Western ratonil, armas de fuego y Plomo.",
+  "accent": "#d9893a",
+  "art": "assets/wdip-cover.webp",
+  "mode": "full",
+  "focus": [
+   0.5,
+   0.5
+  ]
+ },
+ {
+  "repo": "translation-spanish-daggerheart",
+  "title": "Daggerheart ES",
+  "tagline": "Traducción completa de la interfaz al español.",
+  "accent": "#8a5fd0",
+  "art": "docs/img/banner.png",
+  "crop": [
+   0.55,
+   0,
+   1,
+   1
+  ],
+  "mode": "right",
+  "region": 0.46
+ },
+ {
+  "repo": "FrontierScum-ES-",
+  "title": "Frontier Scum ES",
+  "tagline": "Traducción al español, con automatizaciones.",
+  "accent": "#c97b3a",
+  "art": "assets/img/frontier-scum-cover.png",
+  "mode": "full",
+  "focus": [
+   0.5,
+   0.5
+  ]
+ },
+ {
+  "repo": "rp-accessibility",
+  "title": "RP Accessibility",
+  "tagline": "Herramientas de accesibilidad para Foundry VTT.",
+  "accent": "#2fa6a0"
+ },
+ {
+  "repo": "pbpe-exportador",
+  "title": "PBPE Exportador",
+  "tagline": "Exporta el contenido importado a manifiestos compatibles con Babele.",
+  "accent": "#6c8ebf"
+ },
+ {
+  "repo": "foundryvtt-queso-mentira",
+  "title": "Queso Mentira",
+  "tagline": "El dado del Mentiroso, en versión pulp-militar para Foundry VTT.",
+  "accent": "#d9a441"
+ },
+ {
+  "repo": "Sensa_Fine",
+  "title": "Sensa Fine",
+  "tagline": "Una aventura para Mosh, con paquetizado de lujo.",
+  "accent": "#b24a6a"
+ }
+]
