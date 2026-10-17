@@ -55,8 +55,25 @@ def badge(value, label="DOWNLOADS"):
             f'</g></svg>\n')
 
 
+def badge_flat(value, label="downloads"):
+    """Variante plana de 20 px (para READMEs con insignias pequeñas), como el estilo «flat» de shields."""
+    lw = round(len(label) * 6.1 + 12)
+    vw = round(len(value) * 6.8 + 12)
+    w = lw + vw
+    fill = "#fe7d37" if value != "n/d" else "#9f9f9f"
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="20" role="img" aria-label="{label}: {value}">'
+            f'<title>{label}: {value}</title>'
+            f'<clipPath id="r"><rect width="{w}" height="20" rx="3" fill="#fff"/></clipPath>'
+            f'<g clip-path="url(#r)"><rect width="{lw}" height="20" fill="#555"/><rect x="{lw}" width="{vw}" height="20" fill="{fill}"/></g>'
+            f'<g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11" text-rendering="geometricPrecision">'
+            f'<text x="{lw / 2:.1f}" y="14" textLength="{round(len(label) * 6.1)}">{label}</text>'
+            f'<text x="{lw + vw / 2:.1f}" y="14" textLength="{round(len(value) * 6.8)}">{value}</text>'
+            f'</g></svg>\n')
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
+    (OUT.parent / "descargas-flat").mkdir(parents=True, exist_ok=True)
     repos = [r["name"] for r in api(f"/users/{OWNER}/repos?type=owner") if not r["private"]]
     summary, failures = {}, 0
     for name in sorted(repos, key=str.lower):
@@ -70,6 +87,7 @@ def main():
         summary[name] = {"descargas": total, "con_archivos": bool(assets)}
         value = fmt(total) if assets else "n/d"
         (OUT / f"{name}.svg").write_text(badge(value), encoding="utf-8")
+        (OUT.parent / "descargas-flat" / f"{name}.svg").write_text(badge_flat(value), encoding="utf-8")
     summary["_total"] = sum(v["descargas"] for v in summary.values())
     (ROOT / "badges" / "descargas.json").write_text(json.dumps(summary, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     print(f"{len(summary) - 1} repos, {summary['_total']} descargas en total, {failures} avisos")
