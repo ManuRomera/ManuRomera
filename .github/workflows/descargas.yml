@@ -1,0 +1,41 @@
+name: Insignias de descargas
+
+on:
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - scripts/descargas.py
+      - .github/workflows/descargas.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: descargas
+  cancel-in-progress: true
+
+jobs:
+  badges:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Calcular descargas y dibujar las insignias
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/descargas.py
+
+      - name: Publicar los cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add badges
+          if git diff --staged --quiet; then
+            echo "Sin cambios."
+          else
+            git commit -m "badges: descargas $(date -u +%F)"
+            git pull --rebase -q origin main
+            git push
+          fi
