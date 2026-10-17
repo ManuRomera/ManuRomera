@@ -84,7 +84,7 @@
   </tr>
   <tr>
     <td width="50%"><a href="https://github.com/ManuRomera/pbpe-exportador"><img src="./banners/pbpe-exportador.webp" alt="PBPE Exportador" width="100%"></a></td>
-    <td width="50%"><a href="https://github.com/ManuRomera/foundryvtt-queso-mentira"><img src="./banners/foundryvtt-queso-mentira.webp" alt="Queso Mentira" width="100%"></a></td>
+    <td width="50%"><a href="https://github.com/ManuRomera/mr-tahures"><img src="./banners/mr-tahures.webp" alt="MR- Tahúres" width="100%"></a></td>
   </tr>
   <tr>
     <td width="50%"><a href="https://github.com/ManuRomera/Sensa_Fine"><img src="./banners/Sensa_Fine.webp" alt="Sensa Fine" width="100%"></a></td>
@@ -112,6 +112,7 @@
 | ⚔️ **[MR · Un momento único](https://github.com/ManuRomera/mr-un-momento-unico)** | Duelo de samuráis para dos jugadores, sin Director: capítulos en *flashback*, siete marcadores, dados, odio y un Gran Final en cine mudo. La Mesa se integra a pantalla completa en la escena, con modo oscuro para quien tiene sensibilidad a la luz y corrección manual de lo que se consume solo. |
 | 🌙 **[MR · Bruja](https://github.com/ManuRomera/mr-bruja)** | Una vieja bruja, una heredera por encontrar y cinco velas que se apagan. Para dos personas, con mesa, hojas y libro de identidad propia y una libreta cifrada. |
 | 🔮 **[MR · Nosotras, las brujas](https://github.com/ManuRomera/mr-nosotras-las-brujas)** | Siete horas, una Jueza y las Hermanas: baraja de tarot generada, tracker «Ahora», escenas de fondo y mesa a pantalla completa. |
+| 🎲 **[MR · Tahúres](https://github.com/ManuRomera/mr-tahures)** | Juegos de dados de taberna para Foundry, agnósticos de sistema: Dado del Mentiroso y Mia/Meyer con **cinco skins** (noir, fantasía oscura, piratas, Oeste y ciberpunk), IA con personalidad, manos privadas de verdad y bote con el dinero del actor. **[Página del proyecto](https://manuromera.github.io/mr-tahures/)** |
 
 <p align="center">
   <strong>MR no es una colección de botones: intento que cada herramienta tenga identidad, intención y una forma propia de integrarse en la ficción.</strong>
@@ -179,7 +180,6 @@ Sistema propio alrededor de clubes moteros, comunidad, dones, motos, generadores
 | **[Eterno Azul](https://github.com/ManuRomera/eterno-azul-foundry)** | Sistema / experiencia narrativa |
 | **[Los Abuelos de la Justicia](https://github.com/ManuRomera/los-abuelos-de-la-justicia)** | Proyecto de campaña y personajes |
 | **[OL Attack](https://github.com/ManuRomera/ol-attack)** | Ataque, daño y rasgos de D&D 5e en un solo clic |
-| **[Queso Mentira](https://github.com/ManuRomera/foundryvtt-queso-mentira)** | Dado del Mentiroso pulp-militar |
 | **[Sensa Fine](https://github.com/ManuRomera/Sensa_Fine)** | Aventura propia para Mosh con paquetizado de lujo |
 
 ---

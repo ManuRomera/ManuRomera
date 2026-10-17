@@ -344,10 +344,16 @@
   "accent": "#6c8ebf"
  },
  {
-  "repo": "foundryvtt-queso-mentira",
-  "title": "Queso Mentira",
-  "tagline": "El dado del Mentiroso, en versión pulp-militar para Foundry VTT.",
-  "accent": "#d9a441"
+  "repo": "mr-tahures",
+  "title": "Tahúres",
+  "tagline": "Juegos de dados de taberna para Foundry: farolea, duda y te juegas el bote.",
+  "accent": "#c58a2b",
+  "art": "assets/skins/garito/brand/banner.webp",
+  "mode": "full",
+  "focus": [
+   0.7,
+   0.5
+  ]
  },
  {
   "repo": "Sensa_Fine",
