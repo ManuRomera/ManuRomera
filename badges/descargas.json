@@ -11,10 +11,10 @@
   "con_archivos": true,
   "descargas": 41
  },
- "_total": 1136,
+ "_total": 1144,
  "brindlewood-bay-foundry": {
   "con_archivos": true,
-  "descargas": 109
+  "descargas": 110
  },
  "camc-persecuciones": {
   "con_archivos": false,
@@ -38,7 +38,7 @@
  },
  "imserso-to-the-limit": {
   "con_archivos": true,
-  "descargas": 39
+  "descargas": 40
  },
  "los-abuelos-de-la-justicia": {
   "con_archivos": false,
@@ -74,11 +74,11 @@
  },
  "mr-mothership-es": {
   "con_archivos": true,
-  "descargas": 6
+  "descargas": 7
  },
  "mr-nadir": {
   "con_archivos": true,
-  "descargas": 36
+  "descargas": 37
  },
  "mr-nosotras-las-brujas": {
   "con_archivos": true,
@@ -90,7 +90,7 @@
  },
  "mr-standee-portrait": {
   "con_archivos": true,
-  "descargas": 14
+  "descargas": 16
  },
  "mr-story-night": {
   "con_archivos": true,
@@ -150,6 +150,6 @@
  },
  "ysystem3-srd": {
   "con_archivos": true,
-  "descargas": 109
+  "descargas": 111
  }
 }
