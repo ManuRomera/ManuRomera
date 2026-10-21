@@ -11,7 +11,7 @@
   "con_archivos": true,
   "descargas": 41
  },
- "_total": 1189,
+ "_total": 1211,
  "brindlewood-bay-foundry": {
   "con_archivos": true,
   "descargas": 112
@@ -108,6 +108,14 @@
   "con_archivos": true,
   "descargas": 11
  },
+ "mr-trono-de-la-sed": {
+  "con_archivos": true,
+  "descargas": 8
+ },
+ "mr-trono-de-la-sed-gotica": {
+  "con_archivos": true,
+  "descargas": 0
+ },
  "mr-un-momento-unico": {
   "con_archivos": true,
   "descargas": 53
@@ -122,7 +130,7 @@
  },
  "party-corner-portraits-plus": {
   "con_archivos": true,
-  "descargas": 34
+  "descargas": 47
  },
  "pbpe-exportador": {
   "con_archivos": true,
@@ -154,6 +162,6 @@
  },
  "ysystem3-srd": {
   "con_archivos": true,
-  "descargas": 111
+  "descargas": 112
  }
 }
