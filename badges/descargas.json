@@ -11,10 +11,10 @@
   "con_archivos": true,
   "descargas": 41
  },
- "_total": 1144,
+ "_total": 1189,
  "brindlewood-bay-foundry": {
   "con_archivos": true,
-  "descargas": 110
+  "descargas": 112
  },
  "camc-persecuciones": {
   "con_archivos": false,
@@ -54,7 +54,7 @@
  },
  "mr-bruja": {
   "con_archivos": true,
-  "descargas": 33
+  "descargas": 34
  },
  "mr-chronicle": {
   "con_archivos": true,
@@ -78,7 +78,7 @@
  },
  "mr-nadir": {
   "con_archivos": true,
-  "descargas": 37
+  "descargas": 38
  },
  "mr-nosotras-las-brujas": {
   "con_archivos": true,
@@ -86,7 +86,7 @@
  },
  "mr-pizarra": {
   "con_archivos": true,
-  "descargas": 35
+  "descargas": 39
  },
  "mr-standee-portrait": {
   "con_archivos": true,
@@ -114,15 +114,19 @@
  },
  "ocho-lanzas": {
   "con_archivos": true,
-  "descargas": 16
+  "descargas": 17
  },
  "ol-attack": {
   "con_archivos": true,
   "descargas": 29
  },
+ "party-corner-portraits-plus": {
+  "con_archivos": true,
+  "descargas": 34
+ },
  "pbpe-exportador": {
   "con_archivos": true,
-  "descargas": 8
+  "descargas": 10
  },
  "rp-accessibility": {
   "con_archivos": true,
