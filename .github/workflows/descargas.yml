@@ -7,6 +7,8 @@ on:
   push:
     paths:
       - scripts/descargas.py
+      - scripts/make-portada.py
+      - scripts/portada.json
       - .github/workflows/descargas.yml
 
 permissions:
@@ -25,13 +27,15 @@ jobs:
       - name: Calcular descargas y dibujar las insignias
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/descargas.py
+        run: |
+          python3 scripts/descargas.py
+          python3 scripts/make-portada.py
 
       - name: Publicar los cambios
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add badges
+          git add badges README.md docs/index.html
           if git diff --staged --quiet; then
             echo "Sin cambios."
           else
