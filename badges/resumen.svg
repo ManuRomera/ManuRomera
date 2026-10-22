@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="878" viewBox="0 0 1200 878" role="img" aria-label="Resumen de descargas: 1.068">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="878" viewBox="0 0 1200 878" role="img" aria-label="Resumen de descargas: 1.070">
 <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#171923"/><stop offset="1" stop-color="#0d0f14"/></linearGradient></defs>
 <rect width="1200" height="878" rx="22" fill="url(#bg)"/><rect x="1" y="1" width="1198" height="876" rx="21" fill="none" stroke="#2c2f3b" stroke-width="2"/>
 <g font-family="Georgia,'Times New Roman',serif">
 <text x="48" y="82" font-size="46" font-weight="700" fill="#f5efe2">Descargas</text>
 <text x="48" y="118" font-size="20" font-style="italic" fill="#a9a9b3">Archivos de las releases · actualizado 2026-10-22</text>
-<text x="1152" y="96" font-size="76" font-weight="700" fill="#d6af76" text-anchor="end">1.068</text>
+<text x="1152" y="96" font-size="76" font-weight="700" fill="#d6af76" text-anchor="end">1.070</text>
 <text x="1152" y="128" font-size="20" font-style="italic" fill="#a9a9b3" text-anchor="end">descargas de estos proyectos</text>
 <rect x="48.0" y="164" width="264.0" height="106" rx="14" fill="#1d2029"/><rect x="48.0" y="164" width="264.0" height="5" rx="2.5" fill="#d6af76"/>
 <text x="66.0" y="200" font-size="17" font-style="italic" fill="#c9c4b6">Sistemas</text>
@@ -20,7 +20,7 @@
 <text x="856.0" y="248" font-size="16" font-style="italic" fill="#8e8e99" text-anchor="end">10 proyectos</text>
 <rect x="888.0" y="164" width="264.0" height="106" rx="14" fill="#1d2029"/><rect x="888.0" y="164" width="264.0" height="5" rx="2.5" fill="#7fbf8a"/>
 <text x="906.0" y="200" font-size="17" font-style="italic" fill="#c9c4b6">Traducciones</text>
-<text x="906.0" y="248" font-size="40" font-weight="700" fill="#7fbf8a">21</text>
+<text x="906.0" y="248" font-size="40" font-weight="700" fill="#7fbf8a">23</text>
 <text x="1136.0" y="248" font-size="16" font-style="italic" fill="#8e8e99" text-anchor="end">3 proyectos</text>
 <text x="316" y="322" font-size="18" fill="#e9e5d8" text-anchor="end">Cuervos de Asgard MC</text>
 <rect x="330" y="306" width="732" height="20" rx="10" fill="#1d2029"/><rect x="330" y="306" width="732.0" height="20" rx="10" fill="#d6af76"/>
