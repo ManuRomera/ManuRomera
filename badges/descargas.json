@@ -1,7 +1,7 @@
 {
  "FrontierScum-ES-": {
-  "con_archivos": true,
-  "descargas": 1
+  "con_archivos": false,
+  "descargas": 0
  },
  "ManuRomera": {
   "con_archivos": false,
@@ -11,7 +11,7 @@
   "con_archivos": true,
   "descargas": 41
  },
- "_total": 1232,
+ "_total": 689,
  "brindlewood-bay-foundry": {
   "con_archivos": true,
   "descargas": 112
@@ -33,12 +33,12 @@
   "descargas": 0
  },
  "grimwild-es": {
-  "con_archivos": true,
-  "descargas": 14
+  "con_archivos": false,
+  "descargas": 0
  },
  "imserso-to-the-limit": {
-  "con_archivos": true,
-  "descargas": 40
+  "con_archivos": false,
+  "descargas": 0
  },
  "los-abuelos-de-la-justicia": {
   "con_archivos": false,
@@ -53,36 +53,36 @@
   "descargas": 0
  },
  "mr-bruja": {
-  "con_archivos": true,
-  "descargas": 34
+  "con_archivos": false,
+  "descargas": 0
  },
  "mr-chronicle": {
   "con_archivos": true,
   "descargas": 45
  },
  "mr-cuentos-de-animas": {
-  "con_archivos": true,
-  "descargas": 65
+  "con_archivos": false,
+  "descargas": 0
  },
  "mr-entre-ruinas": {
-  "con_archivos": true,
-  "descargas": 31
+  "con_archivos": false,
+  "descargas": 0
  },
  "mr-la-ultima-emision": {
   "con_archivos": true,
   "descargas": 13
  },
  "mr-mothership-es": {
-  "con_archivos": true,
-  "descargas": 7
+  "con_archivos": false,
+  "descargas": 0
  },
  "mr-nadir": {
-  "con_archivos": true,
-  "descargas": 41
+  "con_archivos": false,
+  "descargas": 0
  },
  "mr-nosotras-las-brujas": {
-  "con_archivos": true,
-  "descargas": 49
+  "con_archivos": false,
+  "descargas": 0
  },
  "mr-pizarra": {
   "con_archivos": true,
@@ -93,8 +93,8 @@
   "descargas": 16
  },
  "mr-story-night": {
-  "con_archivos": true,
-  "descargas": 50
+  "con_archivos": false,
+  "descargas": 0
  },
  "mr-tahures": {
   "con_archivos": true,
@@ -110,7 +110,7 @@
  },
  "mr-trono-de-la-sed": {
   "con_archivos": true,
-  "descargas": 24
+  "descargas": 26
  },
  "mr-un-momento-unico": {
   "con_archivos": true,
@@ -121,24 +121,24 @@
   "descargas": 17
  },
  "ol-attack": {
-  "con_archivos": true,
-  "descargas": 29
+  "con_archivos": false,
+  "descargas": 0
  },
  "party-corner-portraits-plus": {
-  "con_archivos": true,
-  "descargas": 48
+  "con_archivos": false,
+  "descargas": 0
  },
  "pbpe-exportador": {
-  "con_archivos": true,
-  "descargas": 10
+  "con_archivos": false,
+  "descargas": 0
  },
  "rp-accessibility": {
   "con_archivos": true,
   "descargas": 5
  },
  "ruido-blanco": {
-  "con_archivos": true,
-  "descargas": 14
+  "con_archivos": false,
+  "descargas": 0
  },
  "standee-portrait": {
   "con_archivos": true,
@@ -157,7 +157,7 @@
   "descargas": 10
  },
  "ysystem3-srd": {
-  "con_archivos": true,
-  "descargas": 112
+  "con_archivos": false,
+  "descargas": 0
  }
 }
