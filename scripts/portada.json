@@ -1,0 +1,45 @@
+{
+ "categorias": [
+  {"id": "sistemas", "titulo": "Sistemas", "lema": "Juegos completos para Foundry: fichas, reglas y mesa propia", "accent": "#d6af76", "emoji": "🎲", "tipo": "Sistema", "proyectos": [
+   ["mr-story-night", "Mesa sin director para jugar a *Follow*: compañía compartida, 24 misiones originales y una sala narrativa que cambia con cada género."],
+   ["mr-entre-ruinas", "El juego narrativo de MIDRA en Foundry 13/14: Voz rotatoria, refugios, comunidades, crisis y oráculos."],
+   ["mr-cuentos-de-animas", "Una caja de relatos malditos: cartas sobre madera, piedras de Espíritu y un modo íntimo 1 + 1."],
+   ["mr-un-momento-unico", "Duelo de samuráis para dos jugadores, sin Director: flashbacks, odio y un Gran Final en cine mudo."],
+   ["mr-bruja", "Una vieja bruja, una heredera por encontrar y cinco velas que se apagan. Para dos personas."],
+   ["mr-nosotras-las-brujas", "Siete horas, una Jueza y las Hermanas: baraja de tarot generada y tracker «Ahora»."],
+   ["brindlewood-bay-foundry", "El club de las Expertas del Crimen, en castellano: seis misterios, tablero del club y teorías."],
+   ["trueque-noir", "Investigación noir con once ambientaciones, ciudad y detectives guiados y mesa compartida del caso."],
+   ["ocho-lanzas", "La Maldición como núcleo visual y mecánico: fichas compactas, ayuda contextual y *El Tejido de Yomi*."],
+   ["ruido-blanco", "Investigación contemporánea emergente. Las Pistas son reales; su significado, interpretable."],
+   ["cuervos-de-asgard-mc", "Clubes moteros, comunidad, dones y motos, con automatizaciones, generadores y compendios."],
+   ["imserso-to-the-limit", "Yayopoints, achaques, Jamacuco, peleas y el panel del Sr. Ministro."],
+   ["ysystem3-srd", "Sistema no oficial de Ysystem3: fichas, tiradas, combate, pánico, persecuciones y 10 variantes."],
+   ["eterno-azul-foundry", "Aventura, vínculos y navegación celeste en un sistema nativo."]
+  ]},
+  {"id": "aventuras", "titulo": "Módulos de aventura", "lema": "Aventuras listas para jugar, con mapas, PNJ, tablas y música", "accent": "#b5484f", "emoji": "🗺️", "tipo": "Aventura", "proyectos": [
+   ["mr-trono-de-la-sed", "Horror gótico para Legend in the Mist: manual de 74 páginas, barra del Narrador y música por motivos."],
+   ["mr-nadir", "Sangre bajo el hielo: horror industrial y rescate para Mothership 1e (3–5 jugadores)."],
+   ["Sensa_Fine", "Aventura propia para Mosh con paquetizado de lujo: imágenes y audios generados por IA."],
+   ["los-abuelos-de-la-justicia", "La aventura de IMSERSO to the limit, lista para importar en Foundry."]
+  ]},
+  {"id": "herramientas", "titulo": "Módulos de herramientas", "lema": "Utilidades para cualquier mesa: menos software, más partida", "accent": "#3fb0ac", "emoji": "🧰", "tipo": "Módulo", "proyectos": [
+   ["mr-token-stage", "Director visual de tokens: escala, grupos, presets, foco, spotlight y deshacer."],
+   ["mr-telegram", "Comunicación privada: mensajería, telegramas, cartas, terminales y tiradas secretas."],
+   ["mr-la-ultima-emision", "Una emisora de radio interactiva y agnóstica de sistema, con overlay sobre la escena."],
+   ["mr-tahures", "Juegos de dados de taberna con cinco skins, IA con personalidad y bote con dinero."],
+   ["mr-pizarra", "Pizarra de investigación colaborativa: corcho, hilos y diarios colgados con permisos."],
+   ["mr-standee-portrait", "Retrato de cuerpo entero con bandera de fondo para cualquier sistema."],
+   ["party-corner-portraits-plus", "Retratos del grupo: vista ampliada, estudio de aspecto, vídeo y GIF."],
+   ["camc-persecuciones", "Una pista visual para las persecuciones de Cuervos de Asgard MC."],
+   ["mausritter-damage-helper", "Daño, armadura, críticos y gasto de usos para Mausritter, sin hojas de cálculo."],
+   ["mausritter-wdip", "We Deal in Pips: western ratonil con armas de fuego, Plomo y estética de cartel de recompensa."]
+  ]},
+  {"id": "traducciones", "titulo": "Traducciones", "lema": "Sistemas extranjeros, en castellano de punta a punta", "accent": "#7fbf8a", "emoji": "🌐", "tipo": "Traducción", "proyectos": [
+   ["mr-litm-es", "Legend in the Mist: interfaz revisada y unificada, textos fijos y la ventana «Cómo jugar»."],
+   ["mr-mothership-es", "Mothership (MoSh): interfaz, hojas, chat y compendios de 0e y 1e."],
+   ["grimwild-es", "Grimwild: interfaz, compendios, creación guiada, herramientas de DJ y accesibilidad."]
+  ]}
+ ],
+ "pages": ["mr-entre-ruinas","mr-cuentos-de-animas","mr-un-momento-unico","mr-bruja","mr-nosotras-las-brujas","brindlewood-bay-foundry","trueque-noir","ocho-lanzas","ruido-blanco","cuervos-de-asgard-mc","imserso-to-the-limit","ysystem3-srd","eterno-azul-foundry","mr-nadir","mr-standee-portrait","mr-telegram","mr-la-ultima-emision","mr-tahures","mr-pizarra","camc-persecuciones","mausritter-damage-helper","mausritter-wdip","grimwild-es","mr-mothership-es","mr-litm-es"],
+ "nombres": {"mr-story-night":"MR · Story Night","mr-entre-ruinas":"MR · Entre Ruinas","mr-cuentos-de-animas":"MR · Cuentos de Ánimas","mr-un-momento-unico":"MR · Un momento único","mr-bruja":"MR · Bruja","mr-nosotras-las-brujas":"MR · Nosotras, las brujas","brindlewood-bay-foundry":"Brindlewood Bay","trueque-noir":"Trueque Noir","ocho-lanzas":"Ocho Lanzas","ruido-blanco":"Ruido Blanco","cuervos-de-asgard-mc":"Cuervos de Asgard MC","imserso-to-the-limit":"IMSERSO to the limit","ysystem3-srd":"Ysystem3 SRD","eterno-azul-foundry":"Eterno Azul","mr-trono-de-la-sed":"MR · El Trono de la Sed","mr-nadir":"MR · Nádir","Sensa_Fine":"Sensa Fine","los-abuelos-de-la-justicia":"Los Abuelos de la Justicia","mr-token-stage":"MR Token Stage","mr-telegram":"M.R. Telegram","mr-la-ultima-emision":"MR · La Última Emisión","mr-tahures":"MR · Tahúres","mr-pizarra":"MR · Pizarra","mr-standee-portrait":"MR · Standee Portrait","party-corner-portraits-plus":"Party Corner Portraits +","camc-persecuciones":"CAMC Persecuciones","mausritter-damage-helper":"Mausritter Damage Helper","mausritter-wdip":"Mausritter · We Deal in Pips","mr-litm-es":"Legend in the Mist ES","mr-mothership-es":"Mothership ES","grimwild-es":"Grimwild ES"}
+}

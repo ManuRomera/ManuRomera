@@ -206,18 +206,6 @@
   "mode": "right"
  },
  {
-  "repo": "mr-chronicle",
-  "title": "MR · Chronicle",
-  "tagline": "Graba tu partida como podcast multipista y transcríbela.",
-  "accent": "#e0533d",
-  "art": "docs/imagenes/portada.png",
-  "mode": "full",
-  "focus": [
-   0.5,
-   0.5
-  ]
- },
- {
   "repo": "mr-la-ultima-emision",
   "title": "La Última Emisión",
   "tagline": "Una emisora de radio interactiva para cualquier sistema.",
@@ -260,15 +248,6 @@
   ]
  },
  {
-  "repo": "ol-attack",
-  "title": "OL Attack",
-  "tagline": "Ataque, daño y rasgos de D&D 5e en un solo clic.",
-  "accent": "#c0392b",
-  "art": "docs/img/ventana-principal.png",
-  "mode": "right",
-  "region": 0.46
- },
- {
   "repo": "eterno-azul-foundry",
   "title": "Eterno Azul",
   "tagline": "Aventura y navegación celeste para Foundry VTT.",
@@ -305,45 +284,6 @@
   ]
  },
  {
-  "repo": "translation-spanish-daggerheart",
-  "title": "Daggerheart ES",
-  "tagline": "Traducción completa de la interfaz al español.",
-  "accent": "#8a5fd0",
-  "art": "docs/img/banner.png",
-  "crop": [
-   0.55,
-   0,
-   1,
-   1
-  ],
-  "mode": "right",
-  "region": 0.46
- },
- {
-  "repo": "FrontierScum-ES-",
-  "title": "Frontier Scum ES",
-  "tagline": "Traducción al español, con automatizaciones.",
-  "accent": "#c97b3a",
-  "art": "assets/img/frontier-scum-cover.png",
-  "mode": "full",
-  "focus": [
-   0.5,
-   0.5
-  ]
- },
- {
-  "repo": "rp-accessibility",
-  "title": "RP Accessibility",
-  "tagline": "Herramientas de accesibilidad para Foundry VTT.",
-  "accent": "#2fa6a0"
- },
- {
-  "repo": "pbpe-exportador",
-  "title": "PBPE Exportador",
-  "tagline": "Exporta el contenido importado a manifiestos compatibles con Babele.",
-  "accent": "#6c8ebf"
- },
- {
   "repo": "mr-tahures",
   "title": "Tahúres",
   "tagline": "Juegos de dados de taberna para Foundry: farolea, duda y te juegas el bote.",
@@ -360,5 +300,99 @@
   "title": "Sensa Fine",
   "tagline": "Una aventura para Mosh, con paquetizado de lujo.",
   "accent": "#b24a6a"
+ },
+ {
+  "repo": "mr-trono-de-la-sed",
+  "title": "El Trono de la Sed",
+  "tagline": "Horror gótico para Legend in the Mist: manual de 74 páginas y barra del Narrador.",
+  "accent": "#9c2233",
+  "art": "assets/emblems/portada.webp",
+  "mode": "full",
+  "focus": [
+   0.5,
+   0.4
+  ]
+ },
+ {
+  "repo": "mr-nadir",
+  "title": "Nádir",
+  "tagline": "Sangre bajo el hielo: horror industrial y rescate para Mothership 1e.",
+  "accent": "#4aa3c7",
+  "art": "assets/art/fig-portada.webp",
+  "mode": "full",
+  "focus": [
+   0.5,
+   0.4
+  ]
+ },
+ {
+  "repo": "mr-mothership-es",
+  "title": "Mothership en español",
+  "tagline": "El sistema MoSh de Foundry, completo en español de España.",
+  "accent": "#78e696",
+  "art": "docs/img/banner.webp",
+  "crop": [
+   0.45,
+   0,
+   1,
+   1
+  ],
+  "mode": "right",
+  "region": 0.6,
+  "focus": [
+   0.5,
+   0.5
+  ]
+ },
+ {
+  "repo": "mr-litm-es",
+  "title": "Legend in the Mist en español",
+  "tagline": "El sistema oficial de Foundry, revisado y traducido al español de España.",
+  "accent": "#d6b26e",
+  "art": "docs/img/banner.webp",
+  "crop": [
+   0.42,
+   0,
+   1,
+   1
+  ],
+  "mode": "right",
+  "region": 0.6,
+  "focus": [
+   0.5,
+   0.5
+  ]
+ },
+ {
+  "repo": "mr-pizarra",
+  "title": "Pizarra",
+  "tagline": "Pizarra de investigación colaborativa: corcho, hilos y diarios colgados.",
+  "accent": "#c98b4a",
+  "art": "docs/img/banner.webp",
+  "crop": [
+   0.4,
+   0,
+   1,
+   1
+  ],
+  "mode": "right",
+  "region": 0.6,
+  "focus": [
+   0.5,
+   0.5
+  ]
+ },
+ {
+  "repo": "party-corner-portraits-plus",
+  "title": "Party Corner Portraits +",
+  "tagline": "Retratos del grupo: vista ampliada, estudio de aspecto, vídeo y GIF.",
+  "accent": "#5f9ea0",
+  "art": "docs/img/hero.png",
+  "mode": "right",
+  "region": 0.6,
+  "focus": [
+   0.5,
+   0.5
+  ]
  }
 ]
