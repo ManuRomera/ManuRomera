@@ -18,7 +18,7 @@
   <img src="https://img.shields.io/badge/Foundry_VTT-13_%7C_14-2B4B6F?style=for-the-badge&logo=foundryvirtualtabletop&logoColor=white" alt="Foundry VTT 13 y 14" />
   <img src="https://img.shields.io/badge/JavaScript-D8A657?style=for-the-badge&logo=javascript&logoColor=1A1F2B" alt="JavaScript" />
   <img src="https://img.shields.io/badge/ES_%7C_EN-i18n-1F6F78?style=for-the-badge" alt="Español e inglés" />
-  <img src="https://img.shields.io/badge/31_proyectos-7B3F61?style=for-the-badge" alt="31 proyectos" />
+  <img src="https://img.shields.io/badge/32_proyectos-7B3F61?style=for-the-badge" alt="32 proyectos" />
 </p>
 
 <p align="center">
@@ -26,7 +26,7 @@
 </p>
 
 <p align="center">
-<a href="#sistemas"><img src="https://img.shields.io/badge/Sistemas-14-d6af76?style=for-the-badge&labelColor=1a1f2b" alt="Sistemas"></a> <a href="#aventuras"><img src="https://img.shields.io/badge/M%C3%B3dulos_de_aventura-4-b5484f?style=for-the-badge&labelColor=1a1f2b" alt="Módulos de aventura"></a> <a href="#herramientas"><img src="https://img.shields.io/badge/M%C3%B3dulos_de_herramientas-10-3fb0ac?style=for-the-badge&labelColor=1a1f2b" alt="Módulos de herramientas"></a> <a href="#traducciones"><img src="https://img.shields.io/badge/Traducciones-3-7fbf8a?style=for-the-badge&labelColor=1a1f2b" alt="Traducciones"></a>
+<a href="#sistemas"><img src="https://img.shields.io/badge/Sistemas-14-d6af76?style=for-the-badge&labelColor=1a1f2b" alt="Sistemas"></a> <a href="#aventuras"><img src="https://img.shields.io/badge/M%C3%B3dulos_de_aventura-4-b5484f?style=for-the-badge&labelColor=1a1f2b" alt="Módulos de aventura"></a> <a href="#herramientas"><img src="https://img.shields.io/badge/M%C3%B3dulos_de_herramientas-11-3fb0ac?style=for-the-badge&labelColor=1a1f2b" alt="Módulos de herramientas"></a> <a href="#traducciones"><img src="https://img.shields.io/badge/Traducciones-3-7fbf8a?style=for-the-badge&labelColor=1a1f2b" alt="Traducciones"></a>
 </p>
 
 <p align="center"><a href="https://github.com/ManuRomera?tab=repositories"><img src="./badges/resumen.svg" alt="Resumen de descargas de todos los proyectos" width="100%"></a></p>
@@ -211,6 +211,14 @@
 <table>
   <tr>
 <td width="50%" valign="top">
+<a href="https://github.com/ManuRomera/mr-direccion"><img src="./banners/mr-direccion.webp" alt="MR- Dirección" width="100%"></a>
+<br>
+<b>MR- Dirección</b><br>
+<sub>Barra de dirección para cualquier sistema: música con fundido cruzado, motivos, figuras con perspectiva, marcadores y editor del GM.</sub><br>
+<sub><a href="https://github.com/ManuRomera/mr-direccion">Repositorio</a></sub><br>
+<img src="./badges/descargas-flat/mr-direccion.svg" alt="Descargas de MR- Dirección">
+</td>
+<td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-token-stage"><img src="./banners/mr-token-stage.webp" alt="MR Token Stage" width="100%"></a>
 <br>
 <b>MR Token Stage</b><br>
@@ -218,6 +226,8 @@
 <sub><a href="https://github.com/ManuRomera/mr-token-stage">Repositorio</a></sub><br>
 <img src="./badges/descargas-flat/mr-token-stage.svg" alt="Descargas de MR Token Stage">
 </td>
+  </tr>
+  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-telegram"><img src="./banners/mr-telegram.webp" alt="M.R. Telegram" width="100%"></a>
 <br>
@@ -226,8 +236,6 @@
 <sub><a href="https://github.com/ManuRomera/mr-telegram">Repositorio</a> · <a href="https://manuromera.github.io/mr-telegram/">Página</a></sub><br>
 <img src="./badges/descargas-flat/mr-telegram.svg" alt="Descargas de M.R. Telegram">
 </td>
-  </tr>
-  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-la-ultima-emision"><img src="./banners/mr-la-ultima-emision.webp" alt="MR · La Última Emisión" width="100%"></a>
 <br>
@@ -236,6 +244,8 @@
 <sub><a href="https://github.com/ManuRomera/mr-la-ultima-emision">Repositorio</a> · <a href="https://manuromera.github.io/mr-la-ultima-emision/">Página</a></sub><br>
 <img src="./badges/descargas-flat/mr-la-ultima-emision.svg" alt="Descargas de MR · La Última Emisión">
 </td>
+  </tr>
+  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-tahures"><img src="./banners/mr-tahures.webp" alt="MR · Tahúres" width="100%"></a>
 <br>
@@ -244,8 +254,6 @@
 <sub><a href="https://github.com/ManuRomera/mr-tahures">Repositorio</a> · <a href="https://manuromera.github.io/mr-tahures/">Página</a></sub><br>
 <img src="./badges/descargas-flat/mr-tahures.svg" alt="Descargas de MR · Tahúres">
 </td>
-  </tr>
-  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-pizarra"><img src="./banners/mr-pizarra.webp" alt="MR · Pizarra" width="100%"></a>
 <br>
@@ -254,6 +262,8 @@
 <sub><a href="https://github.com/ManuRomera/mr-pizarra">Repositorio</a> · <a href="https://manuromera.github.io/mr-pizarra/">Página</a></sub><br>
 <img src="./badges/descargas-flat/mr-pizarra.svg" alt="Descargas de MR · Pizarra">
 </td>
+  </tr>
+  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-standee-portrait"><img src="./banners/mr-standee-portrait.webp" alt="MR · Standee Portrait" width="100%"></a>
 <br>
@@ -262,8 +272,6 @@
 <sub><a href="https://github.com/ManuRomera/mr-standee-portrait">Repositorio</a> · <a href="https://manuromera.github.io/mr-standee-portrait/">Página</a></sub><br>
 <img src="./badges/descargas-flat/mr-standee-portrait.svg" alt="Descargas de MR · Standee Portrait">
 </td>
-  </tr>
-  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/party-corner-portraits-plus"><img src="./banners/party-corner-portraits-plus.webp" alt="Party Corner Portraits +" width="100%"></a>
 <br>
@@ -272,6 +280,8 @@
 <sub><a href="https://github.com/ManuRomera/party-corner-portraits-plus">Repositorio</a></sub><br>
 <img src="./badges/descargas-flat/party-corner-portraits-plus.svg" alt="Descargas de Party Corner Portraits +">
 </td>
+  </tr>
+  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/camc-persecuciones"><img src="./banners/camc-persecuciones.webp" alt="CAMC Persecuciones" width="100%"></a>
 <br>
@@ -280,8 +290,6 @@
 <sub><a href="https://github.com/ManuRomera/camc-persecuciones">Repositorio</a> · <a href="https://manuromera.github.io/camc-persecuciones/">Página</a></sub><br>
 <img src="./badges/descargas-flat/camc-persecuciones.svg" alt="Descargas de CAMC Persecuciones">
 </td>
-  </tr>
-  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mausritter-damage-helper"><img src="./banners/mausritter-damage-helper.webp" alt="Mausritter Damage Helper" width="100%"></a>
 <br>
@@ -290,6 +298,8 @@
 <sub><a href="https://github.com/ManuRomera/mausritter-damage-helper">Repositorio</a> · <a href="https://manuromera.github.io/mausritter-damage-helper/">Página</a></sub><br>
 <img src="./badges/descargas-flat/mausritter-damage-helper.svg" alt="Descargas de Mausritter Damage Helper">
 </td>
+  </tr>
+  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mausritter-wdip"><img src="./banners/mausritter-wdip.webp" alt="Mausritter · We Deal in Pips" width="100%"></a>
 <br>
@@ -298,6 +308,7 @@
 <sub><a href="https://github.com/ManuRomera/mausritter-wdip">Repositorio</a> · <a href="https://manuromera.github.io/mausritter-wdip/">Página</a></sub><br>
 <img src="./badges/descargas-flat/mausritter-wdip.svg" alt="Descargas de Mausritter · We Deal in Pips">
 </td>
+<td width="50%"></td>
   </tr>
 </table>
 
