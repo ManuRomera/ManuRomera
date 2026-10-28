@@ -326,6 +326,18 @@
   ]
  },
  {
+  "repo": "mr-eidolon",
+  "title": "EIDOLON",
+  "tagline": "Nadie recuerda morir: horror científico para Mothership 1e, en castellano e inglés.",
+  "accent": "#b8382a",
+  "art": "assets/art/i_portada.webp",
+  "mode": "full",
+  "focus": [
+   0.5,
+   0.45
+  ]
+ },
+ {
   "repo": "mr-mothership-es",
   "title": "Mothership en español",
   "tagline": "El sistema MoSh de Foundry, completo en español de España.",
