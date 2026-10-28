@@ -1,37 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="252" viewBox="0 0 1200 252" role="img" aria-label="Resumen de descargas: 1.151">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="252" viewBox="0 0 1200 252" role="img" aria-label="Resumen de descargas: 1.167">
 <rect width="1200" height="252" rx="16" fill="#12141b"/><rect x="1" y="1" width="1198" height="250" rx="15" fill="none" stroke="#262935" stroke-width="2"/>
 <g font-family="Georgia,'Times New Roman',serif">
 <text x="36" y="50" font-size="26" font-weight="700" fill="#ece6d6">Descargas</text>
-<text x="196" y="50" font-size="26" font-weight="700" fill="#d6af76">1.151</text>
+<text x="196" y="50" font-size="26" font-weight="700" fill="#d6af76">1.167</text>
 <text x="1164" y="48" font-size="15" font-style="italic" fill="#7d7f8c" text-anchor="end">releases de GitHub · 2026-10-28</text>
 <rect x="36.0" y="70" width="273.0" height="54" rx="10" fill="#1a1d26"/><rect x="36.0" y="70" width="4" height="54" rx="2" fill="#d6af76"/>
 <text x="54.0" y="90" font-size="14" font-style="italic" fill="#a9a9b3">Sistemas</text>
-<text x="54.0" y="115" font-size="22" font-weight="700" fill="#d6af76">817</text>
+<text x="54.0" y="115" font-size="22" font-weight="700" fill="#d6af76">818</text>
 <rect x="321.0" y="70" width="273.0" height="54" rx="10" fill="#1a1d26"/><rect x="321.0" y="70" width="4" height="54" rx="2" fill="#b5484f"/>
 <text x="339.0" y="90" font-size="14" font-style="italic" fill="#a9a9b3">Módulos de aventura</text>
-<text x="339.0" y="115" font-size="22" font-weight="700" fill="#b5484f">99</text>
+<text x="339.0" y="115" font-size="22" font-weight="700" fill="#b5484f">112</text>
 <rect x="606.0" y="70" width="273.0" height="54" rx="10" fill="#1a1d26"/><rect x="606.0" y="70" width="4" height="54" rx="2" fill="#3fb0ac"/>
 <text x="624.0" y="90" font-size="14" font-style="italic" fill="#a9a9b3">Módulos de herramientas</text>
-<text x="624.0" y="115" font-size="22" font-weight="700" fill="#3fb0ac">211</text>
+<text x="624.0" y="115" font-size="22" font-weight="700" fill="#3fb0ac">212</text>
 <rect x="891.0" y="70" width="273.0" height="54" rx="10" fill="#1a1d26"/><rect x="891.0" y="70" width="4" height="54" rx="2" fill="#7fbf8a"/>
 <text x="909.0" y="90" font-size="14" font-style="italic" fill="#a9a9b3">Traducciones</text>
-<text x="909.0" y="115" font-size="22" font-weight="700" fill="#7fbf8a">24</text>
+<text x="909.0" y="115" font-size="22" font-weight="700" fill="#7fbf8a">25</text>
 <text x="36.0" y="164" font-size="15" fill="#d9d4c5">Ysystem3 SRD</text>
 <rect x="226.0" y="153" width="298.0" height="9" rx="4.5" fill="#1a1d26"/><rect x="226.0" y="153" width="298.0" height="9" rx="4.5" fill="#d6af76"/>
-<text x="580.0" y="164" font-size="15" font-weight="700" fill="#ece6d6" text-anchor="end">138</text>
+<text x="580.0" y="164" font-size="15" font-weight="700" fill="#ece6d6" text-anchor="end">139</text>
 <text x="620.0" y="164" font-size="15" fill="#d9d4c5">Cuervos de Asgard MC</text>
-<rect x="810.0" y="153" width="298.0" height="9" rx="4.5" fill="#1a1d26"/><rect x="810.0" y="153" width="244.0" height="9" rx="4.5" fill="#d6af76"/>
+<rect x="810.0" y="153" width="298.0" height="9" rx="4.5" fill="#1a1d26"/><rect x="810.0" y="153" width="242.3" height="9" rx="4.5" fill="#d6af76"/>
 <text x="1164.0" y="164" font-size="15" font-weight="700" fill="#ece6d6" text-anchor="end">113</text>
 <text x="36.0" y="194" font-size="15" fill="#d9d4c5">Brindlewood Bay</text>
-<rect x="226.0" y="183" width="298.0" height="9" rx="4.5" fill="#1a1d26"/><rect x="226.0" y="183" width="241.9" height="9" rx="4.5" fill="#d6af76"/>
+<rect x="226.0" y="183" width="298.0" height="9" rx="4.5" fill="#1a1d26"/><rect x="226.0" y="183" width="240.1" height="9" rx="4.5" fill="#d6af76"/>
 <text x="580.0" y="194" font-size="15" font-weight="700" fill="#ece6d6" text-anchor="end">112</text>
 <text x="620.0" y="194" font-size="15" fill="#d9d4c5">Party Corner Portraits +</text>
-<rect x="810.0" y="183" width="298.0" height="9" rx="4.5" fill="#1a1d26"/><rect x="810.0" y="183" width="181.4" height="9" rx="4.5" fill="#3fb0ac"/>
+<rect x="810.0" y="183" width="298.0" height="9" rx="4.5" fill="#1a1d26"/><rect x="810.0" y="183" width="180.1" height="9" rx="4.5" fill="#3fb0ac"/>
 <text x="1164.0" y="194" font-size="15" font-weight="700" fill="#ece6d6" text-anchor="end">84</text>
 <text x="36.0" y="224" font-size="15" fill="#d9d4c5">Trueque Noir</text>
-<rect x="226.0" y="213" width="298.0" height="9" rx="4.5" fill="#1a1d26"/><rect x="226.0" y="213" width="162.0" height="9" rx="4.5" fill="#d6af76"/>
+<rect x="226.0" y="213" width="298.0" height="9" rx="4.5" fill="#1a1d26"/><rect x="226.0" y="213" width="160.8" height="9" rx="4.5" fill="#d6af76"/>
 <text x="580.0" y="224" font-size="15" font-weight="700" fill="#ece6d6" text-anchor="end">75</text>
 <text x="620.0" y="224" font-size="15" fill="#d9d4c5">MR · Cuentos de Ánimas</text>
-<rect x="810.0" y="213" width="298.0" height="9" rx="4.5" fill="#1a1d26"/><rect x="810.0" y="213" width="155.5" height="9" rx="4.5" fill="#d6af76"/>
+<rect x="810.0" y="213" width="298.0" height="9" rx="4.5" fill="#1a1d26"/><rect x="810.0" y="213" width="154.4" height="9" rx="4.5" fill="#d6af76"/>
 <text x="1164.0" y="224" font-size="15" font-weight="700" fill="#ece6d6" text-anchor="end">72</text>
 </g></svg>
