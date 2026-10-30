@@ -34,8 +34,8 @@ out = f'''<p align="center">
 
 <h1 align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="brand/MR_11_Formal_Marfil_Transparente.png">
-    <img src="brand/MR_08_Formal_Negro_Transparente.png" alt="Manu Romera · Digital RPG Design" width="360">
+    <source media="(prefers-color-scheme: dark)" srcset="badges/mr-logo-marfil.svg">
+    <img src="badges/mr-logo-negro.svg" alt="Manu Romera · Digital RPG Design" width="360">
   </picture>
 </h1>
 
