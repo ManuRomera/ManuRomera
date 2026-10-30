@@ -1,15 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="252" viewBox="0 0 1200 252" role="img" aria-label="Resumen de descargas: 1.286">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="252" viewBox="0 0 1200 252" role="img" aria-label="Resumen de descargas: 1.292">
 <rect width="1200" height="252" rx="16" fill="#12141b"/><rect x="1" y="1" width="1198" height="250" rx="15" fill="none" stroke="#262935" stroke-width="2"/>
 <g font-family="Georgia,'Times New Roman',serif">
 <text x="36" y="50" font-size="26" font-weight="700" fill="#ece6d6">Descargas</text>
-<text x="196" y="50" font-size="26" font-weight="700" fill="#d6af76">1.286</text>
+<text x="196" y="50" font-size="26" font-weight="700" fill="#d6af76">1.292</text>
 <text x="1164" y="48" font-size="15" font-style="italic" fill="#7d7f8c" text-anchor="end">releases de GitHub · 2026-10-30</text>
 <rect x="36.0" y="70" width="273.0" height="54" rx="10" fill="#1a1d26"/><rect x="36.0" y="70" width="4" height="54" rx="2" fill="#d6af76"/>
 <text x="54.0" y="90" font-size="14" font-style="italic" fill="#a9a9b3">Sistemas</text>
 <text x="54.0" y="115" font-size="22" font-weight="700" fill="#d6af76">826</text>
 <rect x="321.0" y="70" width="273.0" height="54" rx="10" fill="#1a1d26"/><rect x="321.0" y="70" width="4" height="54" rx="2" fill="#b5484f"/>
 <text x="339.0" y="90" font-size="14" font-style="italic" fill="#a9a9b3">Módulos de aventura</text>
-<text x="339.0" y="115" font-size="22" font-weight="700" fill="#b5484f">136</text>
+<text x="339.0" y="115" font-size="22" font-weight="700" fill="#b5484f">142</text>
 <rect x="606.0" y="70" width="273.0" height="54" rx="10" fill="#1a1d26"/><rect x="606.0" y="70" width="4" height="54" rx="2" fill="#3fb0ac"/>
 <text x="624.0" y="90" font-size="14" font-style="italic" fill="#a9a9b3">Módulos de herramientas</text>
 <text x="624.0" y="115" font-size="22" font-weight="700" fill="#3fb0ac">288</text>
