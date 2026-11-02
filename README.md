@@ -18,7 +18,7 @@
   <img src="https://img.shields.io/badge/Foundry_VTT-13_%7C_14-2B4B6F?style=for-the-badge&logo=foundryvirtualtabletop&logoColor=white" alt="Foundry VTT 13 y 14" />
   <img src="https://img.shields.io/badge/JavaScript-D8A657?style=for-the-badge&logo=javascript&logoColor=1A1F2B" alt="JavaScript" />
   <img src="https://img.shields.io/badge/ES_%7C_EN-i18n-1F6F78?style=for-the-badge" alt="Español e inglés" />
-  <img src="https://img.shields.io/badge/33_proyectos-7B3F61?style=for-the-badge" alt="33 proyectos" />
+  <img src="https://img.shields.io/badge/34_proyectos-7B3F61?style=for-the-badge" alt="34 proyectos" />
 </p>
 
 <p align="center">
@@ -26,7 +26,7 @@
 </p>
 
 <p align="center">
-<a href="#sistemas"><img src="https://img.shields.io/badge/Sistemas-14-d6af76?style=for-the-badge&labelColor=1a1f2b" alt="Sistemas"></a> <a href="#aventuras"><img src="https://img.shields.io/badge/M%C3%B3dulos_de_aventura-5-b5484f?style=for-the-badge&labelColor=1a1f2b" alt="Módulos de aventura"></a> <a href="#herramientas"><img src="https://img.shields.io/badge/M%C3%B3dulos_de_herramientas-11-3fb0ac?style=for-the-badge&labelColor=1a1f2b" alt="Módulos de herramientas"></a> <a href="#traducciones"><img src="https://img.shields.io/badge/Traducciones-3-7fbf8a?style=for-the-badge&labelColor=1a1f2b" alt="Traducciones"></a>
+<a href="#sistemas"><img src="https://img.shields.io/badge/Sistemas-14-d6af76?style=for-the-badge&labelColor=1a1f2b" alt="Sistemas"></a> <a href="#aventuras"><img src="https://img.shields.io/badge/M%C3%B3dulos_de_aventura-5-b5484f?style=for-the-badge&labelColor=1a1f2b" alt="Módulos de aventura"></a> <a href="#herramientas"><img src="https://img.shields.io/badge/M%C3%B3dulos_de_herramientas-12-3fb0ac?style=for-the-badge&labelColor=1a1f2b" alt="Módulos de herramientas"></a> <a href="#traducciones"><img src="https://img.shields.io/badge/Traducciones-3-7fbf8a?style=for-the-badge&labelColor=1a1f2b" alt="Traducciones"></a>
 </p>
 
 <p align="center"><a href="https://github.com/ManuRomera?tab=repositories"><img src="./badges/resumen.svg" alt="Resumen de descargas de todos los proyectos" width="100%"></a></p>
@@ -319,7 +319,14 @@
 <sub><a href="https://github.com/ManuRomera/mausritter-wdip">Repositorio</a> · <a href="https://manuromera.github.io/mausritter-wdip/">Página</a></sub><br>
 <img src="./badges/descargas-flat/mausritter-wdip.svg" alt="Descargas de Mausritter · We Deal in Pips">
 </td>
-<td width="50%"></td>
+<td width="50%" valign="top">
+<a href="https://github.com/ManuRomera/mr-kit-desguazador"><img src="./banners/mr-kit-desguazador.webp" alt="MR · Kit del Desguazador" width="100%"></a>
+<br>
+<b>MR · Kit del Desguazador</b><br>
+<sub>Las naves del Kit del Desguazador de Mothership: dossier, megadaño con Casco, combate naval, viajes y billetes, y averías de mantenimiento.</sub><br>
+<sub><a href="https://github.com/ManuRomera/mr-kit-desguazador">Repositorio</a> · <a href="https://manuromera.github.io/mr-kit-desguazador/">Página</a></sub><br>
+<img src="./badges/descargas-flat/mr-kit-desguazador.svg" alt="Descargas de MR · Kit del Desguazador">
+</td>
   </tr>
 </table>
 

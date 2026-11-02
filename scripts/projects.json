@@ -406,5 +406,16 @@
    0.5,
    0.5
   ]
+ },
+ {
+  "repo": "mr-kit-desguazador",
+  "title": "Kit del Desguazador",
+  "tagline": "Shipbreakers Toolkit de Mothership en castellano: naves, averías y combate naval.",
+  "accent": "#d94a3d",
+  "art": "docs/img/banner.webp",
+  "crop": [0.5, 0, 1, 1],
+  "mode": "right",
+  "region": 0.6,
+  "focus": [0.5, 0.5]
  }
 ]
