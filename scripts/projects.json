@@ -338,6 +338,18 @@
   ]
  },
  {
+  "repo": "mr-ultimo-descenso",
+  "title": "El Último Descenso",
+  "tagline": "No todas las profundidades pertenecen al mar: horror científico abisal para Mothership 1e.",
+  "accent": "#3fb0ac",
+  "art": "assets/scenes/e01.webp",
+  "mode": "full",
+  "focus": [
+   0.5,
+   0.45
+  ]
+ },
+ {
   "repo": "mr-mothership-es",
   "title": "Mothership en español",
   "tagline": "El sistema MoSh de Foundry, completo en español de España.",
@@ -413,9 +425,17 @@
   "tagline": "Shipbreakers Toolkit de Mothership en castellano: naves, averías y combate naval.",
   "accent": "#d94a3d",
   "art": "docs/img/banner.webp",
-  "crop": [0.5, 0, 1, 1],
+  "crop": [
+   0.5,
+   0,
+   1,
+   1
+  ],
   "mode": "right",
   "region": 0.6,
-  "focus": [0.5, 0.5]
+  "focus": [
+   0.5,
+   0.5
+  ]
  }
 ]

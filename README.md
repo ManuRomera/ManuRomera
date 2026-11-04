@@ -18,7 +18,7 @@
   <img src="https://img.shields.io/badge/Foundry_VTT-13_%7C_14-2B4B6F?style=for-the-badge&logo=foundryvirtualtabletop&logoColor=white" alt="Foundry VTT 13 y 14" />
   <img src="https://img.shields.io/badge/JavaScript-D8A657?style=for-the-badge&logo=javascript&logoColor=1A1F2B" alt="JavaScript" />
   <img src="https://img.shields.io/badge/ES_%7C_EN-i18n-1F6F78?style=for-the-badge" alt="Español e inglés" />
-  <img src="https://img.shields.io/badge/34_proyectos-7B3F61?style=for-the-badge" alt="34 proyectos" />
+  <img src="https://img.shields.io/badge/35_proyectos-7B3F61?style=for-the-badge" alt="35 proyectos" />
 </p>
 
 <p align="center">
@@ -26,7 +26,7 @@
 </p>
 
 <p align="center">
-<a href="#sistemas"><img src="https://img.shields.io/badge/Sistemas-14-d6af76?style=for-the-badge&labelColor=1a1f2b" alt="Sistemas"></a> <a href="#aventuras"><img src="https://img.shields.io/badge/M%C3%B3dulos_de_aventura-5-b5484f?style=for-the-badge&labelColor=1a1f2b" alt="Módulos de aventura"></a> <a href="#herramientas"><img src="https://img.shields.io/badge/M%C3%B3dulos_de_herramientas-12-3fb0ac?style=for-the-badge&labelColor=1a1f2b" alt="Módulos de herramientas"></a> <a href="#traducciones"><img src="https://img.shields.io/badge/Traducciones-3-7fbf8a?style=for-the-badge&labelColor=1a1f2b" alt="Traducciones"></a>
+<a href="#sistemas"><img src="https://img.shields.io/badge/Sistemas-14-d6af76?style=for-the-badge&labelColor=1a1f2b" alt="Sistemas"></a> <a href="#aventuras"><img src="https://img.shields.io/badge/M%C3%B3dulos_de_aventura-6-b5484f?style=for-the-badge&labelColor=1a1f2b" alt="Módulos de aventura"></a> <a href="#herramientas"><img src="https://img.shields.io/badge/M%C3%B3dulos_de_herramientas-12-3fb0ac?style=for-the-badge&labelColor=1a1f2b" alt="Módulos de herramientas"></a> <a href="#traducciones"><img src="https://img.shields.io/badge/Traducciones-3-7fbf8a?style=for-the-badge&labelColor=1a1f2b" alt="Traducciones"></a>
 </p>
 
 <p align="center"><a href="https://github.com/ManuRomera?tab=repositories"><img src="./badges/resumen.svg" alt="Resumen de descargas de todos los proyectos" width="100%"></a></p>
@@ -195,6 +195,16 @@
 <img src="./badges/descargas-flat/mr-eidolon.svg" alt="Descargas de MR · EIDOLON">
 </td>
 <td width="50%" valign="top">
+<a href="https://github.com/ManuRomera/mr-ultimo-descenso"><img src="./banners/mr-ultimo-descenso.webp" alt="MR · El Último Descenso" width="100%"></a>
+<br>
+<b>MR · El Último Descenso</b><br>
+<sub>No todas las profundidades pertenecen al mar: horror científico abisal para Mothership 1e, con manual completo, 39 escenas, banda sonora y relojes para MR- Dirección.</sub><br>
+<sub><a href="https://github.com/ManuRomera/mr-ultimo-descenso">Repositorio</a> · <a href="https://manuromera.github.io/mr-ultimo-descenso/">Página</a></sub><br>
+<img src="./badges/descargas-flat/mr-ultimo-descenso.svg" alt="Descargas de MR · El Último Descenso">
+</td>
+  </tr>
+  <tr>
+<td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/Sensa_Fine"><img src="./banners/Sensa_Fine.webp" alt="Sensa Fine" width="100%"></a>
 <br>
 <b>Sensa Fine</b><br>
@@ -202,8 +212,6 @@
 <sub><a href="https://github.com/ManuRomera/Sensa_Fine">Repositorio</a></sub><br>
 <img src="./badges/descargas-flat/Sensa_Fine.svg" alt="Descargas de Sensa Fine">
 </td>
-  </tr>
-  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/los-abuelos-de-la-justicia"><img src="./banners/los-abuelos-de-la-justicia.webp" alt="Los Abuelos de la Justicia" width="100%"></a>
 <br>
@@ -212,7 +220,6 @@
 <sub><a href="https://github.com/ManuRomera/los-abuelos-de-la-justicia">Repositorio</a></sub><br>
 <img src="./badges/descargas-flat/los-abuelos-de-la-justicia.svg" alt="Descargas de Los Abuelos de la Justicia">
 </td>
-<td width="50%"></td>
   </tr>
 </table>
 
