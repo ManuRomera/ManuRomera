@@ -11,7 +11,7 @@
   "con_archivos": true,
   "descargas": 43
  },
- "_total": 1689,
+ "_total": 1727,
  "brindlewood-bay-foundry": {
   "con_archivos": true,
   "descargas": 112
@@ -38,7 +38,7 @@
  },
  "imserso-to-the-limit": {
   "con_archivos": true,
-  "descargas": 52
+  "descargas": 53
  },
  "los-abuelos-de-la-justicia": {
   "con_archivos": false,
@@ -46,7 +46,7 @@
  },
  "mausritter-damage-helper": {
   "con_archivos": true,
-  "descargas": 8
+  "descargas": 9
  },
  "mausritter-wdip": {
   "con_archivos": false,
@@ -62,7 +62,7 @@
  },
  "mr-chronicle": {
   "con_archivos": true,
-  "descargas": 46
+  "descargas": 47
  },
  "mr-cuentos-de-animas": {
   "con_archivos": true,
@@ -70,15 +70,15 @@
  },
  "mr-direccion": {
   "con_archivos": true,
-  "descargas": 93
+  "descargas": 94
  },
  "mr-doncella-escarcha": {
   "con_archivos": true,
-  "descargas": 48
+  "descargas": 49
  },
  "mr-eidolon": {
   "con_archivos": true,
-  "descargas": 47
+  "descargas": 48
  },
  "mr-entre-ruinas": {
   "con_archivos": true,
@@ -86,23 +86,23 @@
  },
  "mr-kit-desguazador": {
   "con_archivos": true,
-  "descargas": 25
+  "descargas": 26
  },
  "mr-la-ultima-emision": {
   "con_archivos": true,
-  "descargas": 13
+  "descargas": 14
  },
  "mr-litm-es": {
   "con_archivos": true,
-  "descargas": 5
+  "descargas": 6
  },
  "mr-mothership-es": {
   "con_archivos": true,
-  "descargas": 77
+  "descargas": 78
  },
  "mr-nadir": {
   "con_archivos": true,
-  "descargas": 23
+  "descargas": 24
  },
  "mr-nosotras-las-brujas": {
   "con_archivos": true,
@@ -110,11 +110,11 @@
  },
  "mr-pizarra": {
   "con_archivos": true,
-  "descargas": 43
+  "descargas": 44
  },
  "mr-standee-portrait": {
   "con_archivos": true,
-  "descargas": 16
+  "descargas": 17
  },
  "mr-story-night": {
   "con_archivos": true,
@@ -122,27 +122,35 @@
  },
  "mr-tahures": {
   "con_archivos": true,
-  "descargas": 2
+  "descargas": 3
  },
  "mr-telegram": {
   "con_archivos": true,
-  "descargas": 19
+  "descargas": 21
  },
  "mr-token-stage": {
   "con_archivos": true,
-  "descargas": 10
+  "descargas": 11
  },
  "mr-trono-de-la-sed": {
   "con_archivos": true,
-  "descargas": 37
+  "descargas": 38
  },
  "mr-ultimo-descenso": {
   "con_archivos": true,
-  "descargas": 0
+  "descargas": 8
  },
  "mr-un-momento-unico": {
   "con_archivos": true,
   "descargas": 53
+ },
+ "mr-wages-of-sin": {
+  "con_archivos": true,
+  "descargas": 4
+ },
+ "mr-wicked-ones-es": {
+  "con_archivos": true,
+  "descargas": 6
  },
  "ocho-lanzas": {
   "con_archivos": true,
@@ -154,11 +162,11 @@
  },
  "party-corner-portraits-plus": {
   "con_archivos": true,
-  "descargas": 135
+  "descargas": 136
  },
  "pbpe-exportador": {
   "con_archivos": true,
-  "descargas": 10
+  "descargas": 11
  },
  "rp-accessibility": {
   "con_archivos": true,
