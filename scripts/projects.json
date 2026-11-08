@@ -517,5 +517,17 @@
   "title": "Conversor 5e a Legend in the Mist",
   "tagline": "Convierte personajes de D&D 5e en héroes de Legend in the Mist, de forma asistida (beta).",
   "accent": "#d6b26e"
+ },
+ {
+  "repo": "mr-agua-va",
+  "title": "¡Agua Va!",
+  "tagline": "Un día de verano en Nerima: agua fría, animal; agua caliente, persona. Doble forma, Carteles de Madera y ¡PELEA! estilo recreativa.",
+  "accent": "#12a5d6",
+  "art": "assets/laminas/pdf-acto2.webp",
+  "mode": "full",
+  "focus": [
+   0.5,
+   0.5
+  ]
  }
 ]
