@@ -18,7 +18,7 @@
   <img src="https://img.shields.io/badge/Foundry_VTT-13_%7C_14-2B4B6F?style=for-the-badge&logo=foundryvirtualtabletop&logoColor=white" alt="Foundry VTT 13 y 14" />
   <img src="https://img.shields.io/badge/JavaScript-D8A657?style=for-the-badge&logo=javascript&logoColor=1A1F2B" alt="JavaScript" />
   <img src="https://img.shields.io/badge/ES_%7C_EN-i18n-1F6F78?style=for-the-badge" alt="Español e inglés" />
-  <img src="https://img.shields.io/badge/35_proyectos-7B3F61?style=for-the-badge" alt="35 proyectos" />
+  <img src="https://img.shields.io/badge/41_proyectos-7B3F61?style=for-the-badge" alt="41 proyectos" />
 </p>
 
 <p align="center">
@@ -26,7 +26,7 @@
 </p>
 
 <p align="center">
-<a href="#sistemas"><img src="https://img.shields.io/badge/Sistemas-14-d6af76?style=for-the-badge&labelColor=1a1f2b" alt="Sistemas"></a> <a href="#aventuras"><img src="https://img.shields.io/badge/M%C3%B3dulos_de_aventura-6-b5484f?style=for-the-badge&labelColor=1a1f2b" alt="Módulos de aventura"></a> <a href="#herramientas"><img src="https://img.shields.io/badge/M%C3%B3dulos_de_herramientas-12-3fb0ac?style=for-the-badge&labelColor=1a1f2b" alt="Módulos de herramientas"></a> <a href="#traducciones"><img src="https://img.shields.io/badge/Traducciones-3-7fbf8a?style=for-the-badge&labelColor=1a1f2b" alt="Traducciones"></a>
+<a href="#sistemas"><img src="https://img.shields.io/badge/Sistemas-15-d6af76?style=for-the-badge&labelColor=1a1f2b" alt="Sistemas"></a> <a href="#aventuras"><img src="https://img.shields.io/badge/M%C3%B3dulos_de_aventura-9-b5484f?style=for-the-badge&labelColor=1a1f2b" alt="Módulos de aventura"></a> <a href="#herramientas"><img src="https://img.shields.io/badge/M%C3%B3dulos_de_herramientas-14-3fb0ac?style=for-the-badge&labelColor=1a1f2b" alt="Módulos de herramientas"></a> <a href="#traducciones"><img src="https://img.shields.io/badge/Traducciones-3-7fbf8a?style=for-the-badge&labelColor=1a1f2b" alt="Traducciones"></a>
 </p>
 
 <p align="center"><a href="https://github.com/ManuRomera?tab=repositories"><img src="./badges/resumen.svg" alt="Resumen de descargas de todos los proyectos" width="100%"></a></p>
@@ -37,6 +37,14 @@
 <table>
   <tr>
 <td width="50%" valign="top">
+<a href="https://github.com/ManuRomera/mr-mentira-cochina"><img src="./banners/mr-mentira-cochina.webp" alt="MR · ¡Mentira Cochina!" width="100%"></a>
+<br>
+<b>MR · ¡Mentira Cochina!</b><br>
+<sub>Un día en Villa Pingüino en que todas las mentiras se vuelven verdad: aventura completa, panel de dirección, ¡PAM! 2.0 y PDF como una revista shōnen de 1995.</sub><br>
+<sub><a href="https://github.com/ManuRomera/mr-mentira-cochina">Repositorio</a></sub><br>
+<img src="./badges/descargas-flat/mr-mentira-cochina.svg" alt="Descargas de MR · ¡Mentira Cochina!">
+</td>
+<td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-story-night"><img src="./banners/mr-story-night.webp" alt="MR · Story Night" width="100%"></a>
 <br>
 <b>MR · Story Night</b><br>
@@ -44,6 +52,8 @@
 <sub><a href="https://github.com/ManuRomera/mr-story-night">Repositorio</a></sub><br>
 <img src="./badges/descargas-flat/mr-story-night.svg" alt="Descargas de MR · Story Night">
 </td>
+  </tr>
+  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-entre-ruinas"><img src="./banners/mr-entre-ruinas.webp" alt="MR · Entre Ruinas" width="100%"></a>
 <br>
@@ -52,8 +62,6 @@
 <sub><a href="https://github.com/ManuRomera/mr-entre-ruinas">Repositorio</a> · <a href="https://manuromera.github.io/mr-entre-ruinas/">Página</a></sub><br>
 <img src="./badges/descargas-flat/mr-entre-ruinas.svg" alt="Descargas de MR · Entre Ruinas">
 </td>
-  </tr>
-  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-cuentos-de-animas"><img src="./banners/mr-cuentos-de-animas.webp" alt="MR · Cuentos de Ánimas" width="100%"></a>
 <br>
@@ -62,6 +70,8 @@
 <sub><a href="https://github.com/ManuRomera/mr-cuentos-de-animas">Repositorio</a> · <a href="https://manuromera.github.io/mr-cuentos-de-animas/">Página</a></sub><br>
 <img src="./badges/descargas-flat/mr-cuentos-de-animas.svg" alt="Descargas de MR · Cuentos de Ánimas">
 </td>
+  </tr>
+  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-un-momento-unico"><img src="./banners/mr-un-momento-unico.webp" alt="MR · Un momento único" width="100%"></a>
 <br>
@@ -70,8 +80,6 @@
 <sub><a href="https://github.com/ManuRomera/mr-un-momento-unico">Repositorio</a> · <a href="https://manuromera.github.io/mr-un-momento-unico/">Página</a></sub><br>
 <img src="./badges/descargas-flat/mr-un-momento-unico.svg" alt="Descargas de MR · Un momento único">
 </td>
-  </tr>
-  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-bruja"><img src="./banners/mr-bruja.webp" alt="MR · Bruja" width="100%"></a>
 <br>
@@ -80,6 +88,8 @@
 <sub><a href="https://github.com/ManuRomera/mr-bruja">Repositorio</a> · <a href="https://manuromera.github.io/mr-bruja/">Página</a></sub><br>
 <img src="./badges/descargas-flat/mr-bruja.svg" alt="Descargas de MR · Bruja">
 </td>
+  </tr>
+  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-nosotras-las-brujas"><img src="./banners/mr-nosotras-las-brujas.webp" alt="MR · Nosotras, las brujas" width="100%"></a>
 <br>
@@ -88,8 +98,6 @@
 <sub><a href="https://github.com/ManuRomera/mr-nosotras-las-brujas">Repositorio</a> · <a href="https://manuromera.github.io/mr-nosotras-las-brujas/">Página</a></sub><br>
 <img src="./badges/descargas-flat/mr-nosotras-las-brujas.svg" alt="Descargas de MR · Nosotras, las brujas">
 </td>
-  </tr>
-  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/brindlewood-bay-foundry"><img src="./banners/brindlewood-bay-foundry.webp" alt="Brindlewood Bay" width="100%"></a>
 <br>
@@ -98,6 +106,8 @@
 <sub><a href="https://github.com/ManuRomera/brindlewood-bay-foundry">Repositorio</a> · <a href="https://manuromera.github.io/brindlewood-bay-foundry/">Página</a></sub><br>
 <img src="./badges/descargas-flat/brindlewood-bay-foundry.svg" alt="Descargas de Brindlewood Bay">
 </td>
+  </tr>
+  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/trueque-noir"><img src="./banners/trueque-noir.webp" alt="Trueque Noir" width="100%"></a>
 <br>
@@ -106,8 +116,6 @@
 <sub><a href="https://github.com/ManuRomera/trueque-noir">Repositorio</a> · <a href="https://manuromera.github.io/trueque-noir/">Página</a></sub><br>
 <img src="./badges/descargas-flat/trueque-noir.svg" alt="Descargas de Trueque Noir">
 </td>
-  </tr>
-  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/ocho-lanzas"><img src="./banners/ocho-lanzas.webp" alt="Ocho Lanzas" width="100%"></a>
 <br>
@@ -116,6 +124,8 @@
 <sub><a href="https://github.com/ManuRomera/ocho-lanzas">Repositorio</a> · <a href="https://manuromera.github.io/ocho-lanzas/">Página</a></sub><br>
 <img src="./badges/descargas-flat/ocho-lanzas.svg" alt="Descargas de Ocho Lanzas">
 </td>
+  </tr>
+  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/ruido-blanco"><img src="./banners/ruido-blanco.webp" alt="Ruido Blanco" width="100%"></a>
 <br>
@@ -124,8 +134,6 @@
 <sub><a href="https://github.com/ManuRomera/ruido-blanco">Repositorio</a> · <a href="https://manuromera.github.io/ruido-blanco/">Página</a></sub><br>
 <img src="./badges/descargas-flat/ruido-blanco.svg" alt="Descargas de Ruido Blanco">
 </td>
-  </tr>
-  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/cuervos-de-asgard-mc"><img src="./banners/cuervos-de-asgard-mc.webp" alt="Cuervos de Asgard MC" width="100%"></a>
 <br>
@@ -134,6 +142,8 @@
 <sub><a href="https://github.com/ManuRomera/cuervos-de-asgard-mc">Repositorio</a> · <a href="https://manuromera.github.io/cuervos-de-asgard-mc/">Página</a></sub><br>
 <img src="./badges/descargas-flat/cuervos-de-asgard-mc.svg" alt="Descargas de Cuervos de Asgard MC">
 </td>
+  </tr>
+  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/imserso-to-the-limit"><img src="./banners/imserso-to-the-limit.webp" alt="IMSERSO to the limit" width="100%"></a>
 <br>
@@ -142,8 +152,6 @@
 <sub><a href="https://github.com/ManuRomera/imserso-to-the-limit">Repositorio</a> · <a href="https://manuromera.github.io/imserso-to-the-limit/">Página</a></sub><br>
 <img src="./badges/descargas-flat/imserso-to-the-limit.svg" alt="Descargas de IMSERSO to the limit">
 </td>
-  </tr>
-  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/ysystem3-srd"><img src="./banners/ysystem3-srd.webp" alt="Ysystem3 SRD" width="100%"></a>
 <br>
@@ -152,6 +160,8 @@
 <sub><a href="https://github.com/ManuRomera/ysystem3-srd">Repositorio</a> · <a href="https://manuromera.github.io/ysystem3-srd/">Página</a></sub><br>
 <img src="./badges/descargas-flat/ysystem3-srd.svg" alt="Descargas de Ysystem3 SRD">
 </td>
+  </tr>
+  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/eterno-azul-foundry"><img src="./banners/eterno-azul-foundry.webp" alt="Eterno Azul" width="100%"></a>
 <br>
@@ -160,6 +170,7 @@
 <sub><a href="https://github.com/ManuRomera/eterno-azul-foundry">Repositorio</a> · <a href="https://manuromera.github.io/eterno-azul-foundry/">Página</a></sub><br>
 <img src="./badges/descargas-flat/eterno-azul-foundry.svg" alt="Descargas de Eterno Azul">
 </td>
+<td width="50%"></td>
   </tr>
 </table>
 
@@ -169,6 +180,32 @@
 <table>
   <tr>
 <td width="50%" valign="top">
+<a href="https://github.com/ManuRomera/mr-wages-of-sin"><img src="./banners/mr-wages-of-sin.webp" alt="MR · Wages of Sin" width="100%"></a>
+<br>
+<b>MR · Wages of Sin</b><br>
+<sub>Las 100 órdenes de busca, 10 cazarrecompensas, 3 naves y una Terminal interactiva para Mothership 1e, en español.</sub><br>
+<sub><a href="https://github.com/ManuRomera/mr-wages-of-sin">Repositorio</a></sub><br>
+<img src="./badges/descargas-flat/mr-wages-of-sin.svg" alt="Descargas de MR · Wages of Sin">
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/ManuRomera/mr-wicked-ones-es"><img src="./banners/mr-wicked-ones-es.webp" alt="MR · Wicked Ones" width="100%"></a>
+<br>
+<b>MR · Wicked Ones</b><br>
+<sub>Campaña «El Valle Silencioso» para Wicked Ones, con hojas sin cajas, creador de monstruos, asistente del DJ y dados propios.</sub><br>
+<sub><a href="https://github.com/ManuRomera/mr-wicked-ones-es">Repositorio</a></sub><br>
+<img src="./badges/descargas-flat/mr-wicked-ones-es.svg" alt="Descargas de MR · Wicked Ones">
+</td>
+  </tr>
+  <tr>
+<td width="50%" valign="top">
+<a href="https://github.com/ManuRomera/mr-doncella-escarcha"><img src="./banners/mr-doncella-escarcha.webp" alt="MR · La Rima de la Doncella" width="100%"></a>
+<br>
+<b>MR · La Rima de la Doncella</b><br>
+<sub>Valle del Viento Helado convertido a Legend in the Mist: héroes pregenerados, Diez Ciudades, desafíos y escenas ilustradas.</sub><br>
+<sub><a href="https://github.com/ManuRomera/mr-doncella-escarcha">Repositorio</a></sub><br>
+<img src="./badges/descargas-flat/mr-doncella-escarcha.svg" alt="Descargas de MR · La Rima de la Doncella">
+</td>
+<td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-trono-de-la-sed"><img src="./banners/mr-trono-de-la-sed.webp" alt="MR · El Trono de la Sed" width="100%"></a>
 <br>
 <b>MR · El Trono de la Sed</b><br>
@@ -176,6 +213,8 @@
 <sub><a href="https://github.com/ManuRomera/mr-trono-de-la-sed">Repositorio</a></sub><br>
 <img src="./badges/descargas-flat/mr-trono-de-la-sed.svg" alt="Descargas de MR · El Trono de la Sed">
 </td>
+  </tr>
+  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-nadir"><img src="./banners/mr-nadir.webp" alt="MR · Nádir" width="100%"></a>
 <br>
@@ -184,8 +223,6 @@
 <sub><a href="https://github.com/ManuRomera/mr-nadir">Repositorio</a> · <a href="https://manuromera.github.io/mr-nadir/">Página</a></sub><br>
 <img src="./badges/descargas-flat/mr-nadir.svg" alt="Descargas de MR · Nádir">
 </td>
-  </tr>
-  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-eidolon"><img src="./banners/mr-eidolon.webp" alt="MR · EIDOLON" width="100%"></a>
 <br>
@@ -194,6 +231,8 @@
 <sub><a href="https://github.com/ManuRomera/mr-eidolon">Repositorio</a></sub><br>
 <img src="./badges/descargas-flat/mr-eidolon.svg" alt="Descargas de MR · EIDOLON">
 </td>
+  </tr>
+  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-ultimo-descenso"><img src="./banners/mr-ultimo-descenso.webp" alt="MR · El Último Descenso" width="100%"></a>
 <br>
@@ -202,8 +241,6 @@
 <sub><a href="https://github.com/ManuRomera/mr-ultimo-descenso">Repositorio</a> · <a href="https://manuromera.github.io/mr-ultimo-descenso/">Página</a></sub><br>
 <img src="./badges/descargas-flat/mr-ultimo-descenso.svg" alt="Descargas de MR · El Último Descenso">
 </td>
-  </tr>
-  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/Sensa_Fine"><img src="./banners/Sensa_Fine.webp" alt="Sensa Fine" width="100%"></a>
 <br>
@@ -212,6 +249,8 @@
 <sub><a href="https://github.com/ManuRomera/Sensa_Fine">Repositorio</a></sub><br>
 <img src="./badges/descargas-flat/Sensa_Fine.svg" alt="Descargas de Sensa Fine">
 </td>
+  </tr>
+  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/los-abuelos-de-la-justicia"><img src="./banners/los-abuelos-de-la-justicia.webp" alt="Los Abuelos de la Justicia" width="100%"></a>
 <br>
@@ -220,6 +259,7 @@
 <sub><a href="https://github.com/ManuRomera/los-abuelos-de-la-justicia">Repositorio</a></sub><br>
 <img src="./badges/descargas-flat/los-abuelos-de-la-justicia.svg" alt="Descargas de Los Abuelos de la Justicia">
 </td>
+<td width="50%"></td>
   </tr>
 </table>
 
@@ -227,6 +267,24 @@
 <p align="center"><img src="./banners/seccion-herramientas.webp" alt="Módulos de herramientas" width="100%"></p>
 
 <table>
+  <tr>
+<td width="50%" valign="top">
+<a href="https://github.com/ManuRomera/mr-chronicle"><img src="./banners/mr-chronicle.webp" alt="MR · Chronicle" width="100%"></a>
+<br>
+<b>MR · Chronicle</b><br>
+<sub>Graba tus sesiones como podcast multipista y transcríbelas, desde el propio navegador (en desarrollo).</sub><br>
+<sub><a href="https://github.com/ManuRomera/mr-chronicle">Repositorio</a></sub><br>
+<img src="./badges/descargas-flat/mr-chronicle.svg" alt="Descargas de MR · Chronicle">
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/ManuRomera/mr-5e-to-litm"><img src="./banners/mr-5e-to-litm.webp" alt="MR · 5e a LitM" width="100%"></a>
+<br>
+<b>MR · 5e a LitM</b><br>
+<sub>Convierte personajes de D&amp;D 5e en héroes de Legend in the Mist, de forma asistida (beta).</sub><br>
+<sub><a href="https://github.com/ManuRomera/mr-5e-to-litm">Repositorio</a></sub><br>
+<img src="./badges/descargas-flat/mr-5e-to-litm.svg" alt="Descargas de MR · 5e a LitM">
+</td>
+  </tr>
   <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-direccion"><img src="./banners/mr-direccion.webp" alt="MR- Dirección" width="100%"></a>

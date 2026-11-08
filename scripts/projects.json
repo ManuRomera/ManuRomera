@@ -437,5 +437,85 @@
    0.5,
    0.5
   ]
+ },
+ {
+  "repo": "mr-mentira-cochina",
+  "title": "¡Mentira Cochina!",
+  "tagline": "Un día en Villa Pingüino en que todas las mentiras se vuelven verdad. Aventura y sistema al estilo shōnen de 1995.",
+  "accent": "#e2172e",
+  "art": "assets/laminas/pdf-acto2.webp",
+  "mode": "full",
+  "focus": [
+   0.5,
+   0.5
+  ]
+ },
+ {
+  "repo": "mr-wages-of-sin",
+  "title": "Wages of Sin",
+  "tagline": "Las 100 órdenes de busca, 10 cazarrecompensas y la Luna Carcelaria para Mothership 1e, en español.",
+  "accent": "#c0392b",
+  "art": "docs/img/banner.webp",
+  "crop": [
+   0.6,
+   0,
+   1,
+   1
+  ],
+  "mode": "right",
+  "region": 0.6,
+  "focus": [
+   0.5,
+   0.5
+  ]
+ },
+ {
+  "repo": "mr-wicked-ones-es",
+  "title": "Wicked Ones: Campaña y mejoras",
+  "tagline": "«El Valle Silencioso», hojas sin cajas, creador de monstruos, asistente para el DJ y dados propios.",
+  "accent": "#e0883a",
+  "art": "assets/escenas/esc-portada.webp",
+  "mode": "full",
+  "focus": [
+   0.5,
+   0.5
+  ]
+ },
+ {
+  "repo": "mr-doncella-escarcha",
+  "title": "La Rima de la Doncella",
+  "tagline": "Valle del Viento Helado convertido a Legend in the Mist: héroes, Diez Ciudades y desafíos ilustrados.",
+  "accent": "#6fb7d6",
+  "art": "assets/scenes/bryn-shander-la-villa-amurallada.webp",
+  "mode": "full",
+  "focus": [
+   0.5,
+   0.45
+  ]
+ },
+ {
+  "repo": "mr-chronicle",
+  "title": "Chronicle",
+  "tagline": "Tu partida. Todas sus voces. Graba tus sesiones como podcast multipista y transcríbelas.",
+  "accent": "#d23c3c",
+  "art": "docs/imagenes/portada.png",
+  "crop": [
+   0.5,
+   0,
+   1,
+   1
+  ],
+  "mode": "right",
+  "region": 0.6,
+  "focus": [
+   0.5,
+   0.5
+  ]
+ },
+ {
+  "repo": "mr-5e-to-litm",
+  "title": "Conversor 5e a Legend in the Mist",
+  "tagline": "Convierte personajes de D&D 5e en héroes de Legend in the Mist, de forma asistida (beta).",
+  "accent": "#d6b26e"
  }
 ]
