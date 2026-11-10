@@ -1,0 +1,84 @@
+{
+  "product": "mr-direccion",
+  "requiredSelector": "#mr-direccion-bar",
+  "steps": [
+    {
+      "label": "Apertura con la barra",
+      "action": "wait",
+      "holdMs": 1800
+    },
+    {
+      "label": "Mostrar selector de escenas",
+      "action": "click",
+      "selector": "#mr-direccion-bar details[data-menu='scenes'] > summary",
+      "holdMs": 1100
+    },
+    {
+      "label": "Previsualizar escena",
+      "action": "hover",
+      "selector": "#mr-direccion-bar .mrd-scene-item",
+      "holdMs": 1800,
+      "optional": true
+    },
+    {
+      "label": "Cerrar selector",
+      "action": "click",
+      "selector": "#mr-direccion-bar details[data-menu='scenes'] > summary",
+      "holdMs": 700
+    },
+    {
+      "label": "Abrir motivos musicales",
+      "action": "click",
+      "selector": "#mr-direccion-bar details[data-menu='motifs'] > summary",
+      "holdMs": 1900,
+      "optional": true
+    },
+    {
+      "label": "Cerrar motivos",
+      "action": "click",
+      "selector": "#mr-direccion-bar details[data-menu='motifs'] > summary",
+      "holdMs": 650,
+      "optional": true
+    },
+    {
+      "label": "Mostrar figuras y tamaño",
+      "action": "click",
+      "selector": "#mr-direccion-bar details[data-menu='figures'] > summary",
+      "holdMs": 1600,
+      "optional": true
+    },
+    {
+      "label": "Cerrar figuras",
+      "action": "click",
+      "selector": "#mr-direccion-bar details[data-menu='figures'] > summary",
+      "holdMs": 650,
+      "optional": true
+    },
+    {
+      "label": "Mostrar controles de mezcla",
+      "action": "click",
+      "selector": "#mr-direccion-bar details[data-menu='mix'] > summary",
+      "holdMs": 1900,
+      "optional": true
+    },
+    {
+      "label": "Cerrar mezcla",
+      "action": "click",
+      "selector": "#mr-direccion-bar details[data-menu='mix'] > summary",
+      "holdMs": 650,
+      "optional": true
+    },
+    {
+      "label": "Abrir editor del director",
+      "action": "click",
+      "selector": "#mr-direccion-bar [data-mrd-action='editor']",
+      "holdMs": 2600,
+      "optional": true
+    },
+    {
+      "label": "Plano final",
+      "action": "wait",
+      "holdMs": 1600
+    }
+  ]
+}
