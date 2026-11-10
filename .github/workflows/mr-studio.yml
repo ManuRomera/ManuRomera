@@ -1,5 +1,16 @@
 name: MR Studio · Campañas en borrador
+
 on:
+  pull_request:
+    paths:
+      - ".github/workflows/mr-studio.yml"
+      - "scripts/mr_studio*.py"
+      - "studio/**"
+      - "tests/test_mr_studio.py"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mr-studio.yml"
   schedule:
     - cron: "23 8 * * *"
   workflow_dispatch:
@@ -14,14 +25,29 @@ on:
         description: Incluir release antigua
         type: boolean
         default: false
+
 permissions:
   contents: read
   issues: write
+
 concurrency:
   group: mr-studio-pilot
   cancel-in-progress: false
+
 jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validar parser, licencia y modo borrador
+        run: python -m unittest discover -s tests -p 'test_mr_studio.py' -v
+
   drafts:
+    needs: checks
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -29,19 +55,17 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Instalar requisitos
+      - name: Preparar entorno audiovisual
         run: |
           python -m pip install "Pillow>=11,<13"
           ffmpeg -version | head -n 1
-      - name: Validar
-        run: python -m unittest discover -s tests -p 'test_mr_studio.py' -v
       - name: Detectar y redactar sin publicar
         env:
           GITHUB_TOKEN: ${{ github.token }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           MR_STUDIO_AI_MODEL: ${{ vars.MR_STUDIO_AI_MODEL || 'gpt-5-mini' }}
-          REPOSITORY: ${{ github.event.inputs.repository || 'all' }}
-          FORCE: ${{ github.event.inputs.force || 'false' }}
+          REPOSITORY: ${{ github.event_name == 'push' && 'mr-direccion' || github.event.inputs.repository || 'all' }}
+          FORCE: ${{ github.event_name == 'push' && 'true' || github.event.inputs.force || 'false' }}
         run: |
           args=(--catalog studio/catalog.json --out studio/output --repo "$REPOSITORY" --issues)
           if [ "$FORCE" = "true" ]; then args+=(--force); fi
