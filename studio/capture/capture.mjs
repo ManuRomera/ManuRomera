@@ -69,7 +69,7 @@ function configFromEnv() {
   };
 }
 async function ready(page) {
-  await page.waitForFunction(() => Boolean(globalThis.game?.ready), {timeout:45000});
+  await page.waitForFunction(() => Boolean(globalThis.game?.ready), null, {timeout:45000});
 }
 async function verify(page, expectedWorld, product) {
   await ready(page);
