@@ -1,0 +1,6 @@
+output/
+capture/output/
+capture/node_modules/
+capture/.env
+*.webm
+*.mp4
