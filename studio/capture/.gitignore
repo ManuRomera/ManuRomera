@@ -1,0 +1,6 @@
+output/
+node_modules/
+.env
+*.webm
+*.mp4
+*.png

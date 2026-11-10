@@ -33,9 +33,13 @@ Si añades un secreto del repositorio llamado \`OPENAI_API_KEY\`, el agente rees
 - No comercializar material CC BY-NC u otro contenido restringido sin autorización adecuada.
 - Patreon requiere identidad, cuenta y, si se automatizan membresías, OAuth/API v2 y configuración de prestaciones; esta fase no crea ni cobra suscripciones.
 
+## Captura real de Foundry (nuevo)
+
+Se ha incorporado el workflow manual **MR Studio · Captura real de Foundry** y un capturador Playwright aislado. Consulta [la guía de grabación](capture/README.md) para los cinco secretos, el mundo demo y el botón de ejecución. La primera grabación real aún depende de conectar la instancia de Oracle; los tests CI no sustituyen comprobar la imagen de Foundry real.
+
 ## Siguientes conexiones
 
-1. **Foundry de pruebas**: URL, credenciales dedicadas y mundo de demostración para grabar secuencias reales con Playwright; no guardarlas en GitHub.
+1. **Foundry de pruebas**: preparar mundo exclusivo y 5 secretos de GitHub; el código de grabación y montaje ya está incorporado.
 2. **Canal de vídeo**: conectar YouTube u otro publicador mediante OAuth con revisión humana previa.
 3. **Patreon**: crear perfil, definir recompensas y distribución solo de obras verificadas comercializables.
 4. **Analítica**: medir clics y conversiones en enlaces propios y comparar campañas.
@@ -46,5 +50,7 @@ Si añades un secreto del repositorio llamado \`OPENAI_API_KEY\`, el agente rees
 - \`../../scripts/mr_studio.py\`: consulta GitHub, deduplicación, guiones y borradores.
 - \`../../scripts/mr_studio_render.py\`: vídeos MP4 básicos desde imágenes y cartas tipográficas.
 - \`../../tests/test_mr_studio.py\`: pruebas de extracción y seguridad.
+- [\`capture/\`](capture/README.md): guion y navegador de grabación real de un mundo de demostración.
+- \`../../scripts/mr_studio_live_render.py\`: teasers automáticos a partir de vídeo real.
 
 **Criterio de éxito del piloto:** una release de MR · Dirección da lugar a una incidencia revisable y a dos MP4 de prueba, sin intervención para preparar el material y sin publicación externa.

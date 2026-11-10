@@ -1,0 +1,14 @@
+{
+  "name": "mr-studio-foundry-capture",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Browser capture of live Foundry demos in a dedicated, approved world",
+  "scripts": {
+    "validate": "node --check capture.mjs && node capture.mjs --validate-only",
+    "capture": "node capture.mjs --product mr-direccion"
+  },
+  "dependencies": {
+    "playwright": "^1.55.0"
+  }
+}
