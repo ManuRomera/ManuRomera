@@ -188,7 +188,7 @@ def main():
         if not args.force and not recent(rel.get("published_at")):
             print(key,"descartada por antigüedad")
             continue
-        if key in seen:
+        if key in seen and not args.force:
             print(key,"ya revisada")
             continue
         c=build(p,rel)
@@ -197,7 +197,7 @@ def main():
         (dest/"campaign.json").write_text(json.dumps(c,ensure_ascii=False,indent=2),encoding="utf-8")
         (dest/"campaign.md").write_text(markdown(c),encoding="utf-8")
         print("Borrador:",dest)
-        if args.issues:
+        if args.issues and key not in seen:
             print("Incidencia:",create_issue(c))
             seen.add(key)
         total+=1
