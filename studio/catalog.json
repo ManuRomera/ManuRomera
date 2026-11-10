@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "public_channels_only": true,
+  "products": [
+    {
+      "repo": "mr-direccion",
+      "name": "MR · Dirección",
+      "description": "Una barra de dirección de escenas para Foundry VTT, con presentación visual, música y efectos.",
+      "landing": "https://github.com/ManuRomera/mr-direccion",
+      "kind": "herramienta",
+      "rights": "pendiente_verificacion_visual",
+      "media": [
+        "docs/img/banner.webp",
+        "docs/img/recorrido.gif"
+      ],
+      "official_foundry_marketing": "human_only"
+    },
+    {
+      "repo": "mr-token-stage",
+      "name": "MR · Token Stage",
+      "description": "Escala visual de tokens, halos, transparencia, contadores por turno y focos de escena.",
+      "landing": "https://github.com/ManuRomera/mr-token-stage",
+      "kind": "herramienta",
+      "rights": "pendiente_verificacion_visual",
+      "media": [
+        "docs/img/hero.webp",
+        "docs/img/scene.webp"
+      ],
+      "official_foundry_marketing": "human_only"
+    },
+    {
+      "repo": "mr-telegram",
+      "name": "MR · Telegram",
+      "description": "Mensajería privada, tiradas secretas y temas visuales en Foundry VTT.",
+      "landing": "https://github.com/ManuRomera/mr-telegram",
+      "kind": "herramienta",
+      "rights": "pendiente_verificacion_visual",
+      "media": [
+        "docs/img/hilo.png",
+        "docs/img/tirada-secreta.png"
+      ],
+      "official_foundry_marketing": "human_only"
+    }
+  ]
+}
