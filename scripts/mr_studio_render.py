@@ -148,11 +148,15 @@ def process(path):
 def main():
     if not ROOT.exists():
         return
+    failures=0
     for item in ROOT.glob("*/**/campaign.json"):
         try:
             process(item)
         except (OSError,ValueError,subprocess.SubprocessError) as exc:
             print("Fallo de render:",item,exc,file=sys.stderr)
+            failures+=1
+    if failures:
+        raise SystemExit(f"Fallaron {failures} montajes; consulta los logs")
 
 if __name__=="__main__":
     main()
