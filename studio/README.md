@@ -8,7 +8,7 @@ Sistema de **preparación de campañas en borrador** para los repositorios de Ma
 2. Detecta una release sin incidencia previa (identificador \`MR_STUDIO:repo@tag\`). Las programadas ignoran releases antiguas.
 3. Extrae los cambios declarados en la release. No inventa funciones, disponibilidad ni compatibilidades.
 4. Prepara \`campaign.md\`, \`campaign.json\`, guion, copys y una **previsualización de vídeo sin música** en 9:16 y 16:9, a partir de imágenes de repositorios propios. Si faltan imágenes, se queda en borrador de texto.
-5. Publica los archivos **solo como artefactos privados de la ejecución** (no posts) y abre una incidencia de revisión. No hay botones de publicación automática.
+5. Publica los archivos **solo como artefactos de la ejecución (visibles a quienes tengan acceso al repositorio)** (no posts) y abre una incidencia de revisión. No hay botones de publicación automática.
 6. La persona responsable verifica capturas, derechos, afirmaciones, comportamiento real y decide si usar el material.
 
 ## Ejecutarlo desde GitHub
