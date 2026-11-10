@@ -1,0 +1,134 @@
+name: MR Studio · Captura real de Foundry
+
+on:
+  pull_request:
+    paths:
+      - "studio/capture/**"
+      - "scripts/mr_studio_live_render.py"
+      - ".github/workflows/mr-studio-capture.yml"
+  workflow_dispatch:
+    inputs:
+      prepare_demo_example:
+        description: "Instalar/actualizar ejemplo sólo en el mundo demo autorizado"
+        type: boolean
+        required: true
+        default: false
+      upload_preview:
+        description: "Adjuntar vídeos a esta ejecución PÚBLICA de GitHub (sólo mundo demo)"
+        type: boolean
+        required: true
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mr-studio-foundry-capture
+  cancel-in-progress: false
+
+jobs:
+  validation:
+    name: Comprobar guion y montaje
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validar seguridad y sintaxis
+        run: |
+          node --check studio/capture/capture.mjs
+          node studio/capture/capture.mjs --validate-only --product mr-direccion
+          python -m py_compile scripts/mr_studio_live_render.py
+      - name: Probar exportador con un vídeo sintético sólo para CI
+        run: |
+          python -m pip install "Pillow>=11,<13"
+          if ! command -v ffmpeg >/dev/null 2>&1; then sudo apt-get update -qq && sudo apt-get install -y ffmpeg; fi
+          ffmpeg -nostdin -hide_banner -loglevel error -y \
+            -f lavfi -i "testsrc2=size=640x360:rate=24:duration=3" \
+            -c:v libvpx -b:v 500k /tmp/mr-studio-test.webm
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          payload={"product":{"repo":"mr-direccion","name":"MR · Dirección",
+             "description":"Ensayo de formato técnico sin publicación",
+             "landing":"https://github.com/ManuRomera/mr-direccion"},
+             "release":{"tag":"vTEST-CI"},"copy":{"hook":"Prueba de exportación CI"},
+             "highlights":["Esto NO es una grabación de Foundry."],"publication_enabled":False}
+          Path("/tmp/mr-campaign.json").write_text(json.dumps(payload),encoding="utf8")
+          PY
+          python scripts/mr_studio_live_render.py \
+            --capture /tmp/mr-studio-test.webm \
+            --campaign /tmp/mr-campaign.json --out /tmp/mr-studio-ci
+          test -s /tmp/mr-studio-ci/live-preview-vertical.mp4
+          test -s /tmp/mr-studio-ci/live-preview-horizontal.mp4
+          echo "Validado el montaje; el vídeo sintético de prueba no se publica."
+
+  real_foundry:
+    name: Capturar DEMO Foundry (sólo bajo demanda)
+    needs: validation
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      FOUNDRY_DEMO_URL: ${{ secrets.FOUNDRY_DEMO_URL }}
+      FOUNDRY_DEMO_WORLD_ID: ${{ secrets.FOUNDRY_DEMO_WORLD_ID }}
+      FOUNDRY_DEMO_GM_USER: ${{ secrets.FOUNDRY_DEMO_GM_USER }}
+      FOUNDRY_DEMO_GM_PASSWORD: ${{ secrets.FOUNDRY_DEMO_GM_PASSWORD }}
+      FOUNDRY_DEMO_APPROVED: ${{ secrets.FOUNDRY_DEMO_APPROVED }}
+      FOUNDRY_DEMO_ALLOW_SETUP: ${{ inputs.prepare_demo_example && 'YES' || 'NO' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verificar configuración del mundo de demostración
+        run: |
+          for k in FOUNDRY_DEMO_URL FOUNDRY_DEMO_WORLD_ID FOUNDRY_DEMO_GM_USER FOUNDRY_DEMO_GM_PASSWORD FOUNDRY_DEMO_APPROVED; do
+            if [ -z "${!k}" ]; then echo "::error::Falta el secreto $k"; exit 1; fi
+          done
+          test "$FOUNDRY_DEMO_APPROVED" = "YES_DEDICATED_DEMO_WORLD"
+      - name: Instalar navegador y códecs
+        working-directory: studio/capture
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Grabar demo real, excluyendo la pantalla de acceso
+        run: |
+          args=(--product mr-direccion --out studio/capture/output)
+          if [ "$FOUNDRY_DEMO_ALLOW_SETUP" = "YES" ]; then args+=(--prepare-example); fi
+          node studio/capture/capture.mjs "${args[@]}"
+      - name: Crear campaña factual desde la release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python scripts/mr_studio.py --repo mr-direccion --force --out studio/output
+      - name: Montar ambos formatos de vídeo real
+        run: |
+          python -m pip install "Pillow>=11,<13"
+          if ! command -v ffmpeg >/dev/null 2>&1; then sudo apt-get update -qq && sudo apt-get install -y ffmpeg; fi
+          file=$(find studio/output/mr-direccion -type f -name campaign.json -print -quit)
+          test -n "$file"
+          python scripts/mr_studio_live_render.py \
+            --capture studio/capture/output/mr-direccion-demo.webm \
+            --campaign "$file"
+          ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1 "$(
+            dirname "$file"
+          )/live-preview-vertical.mp4"
+      - name: Entregar sólo material expresamente autorizado para revisión pública
+        if: inputs.upload_preview == true
+        uses: actions/upload-artifact@v4
+        with:
+          name: mr-studio-foundry-demo-borrador
+          path: |
+            studio/output/mr-direccion/
+            studio/capture/output/mr-direccion-capture.json
+          if-no-files-found: error
+          retention-days: 3
