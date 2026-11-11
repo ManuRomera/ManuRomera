@@ -71,7 +71,27 @@ function configFromEnv() {
   };
 }
 async function ready(page) {
-  await page.waitForFunction(() => Boolean(globalThis.game?.ready), null, {timeout:45000});
+  try {
+    await page.waitForFunction(() => Boolean(globalThis.game?.ready), null, {timeout:30000});
+  } catch (err) {
+    const status = await page.evaluate(() => ({
+      pathname: new URL(window.location.href).pathname.toLowerCase(),
+      gamePresent: Boolean(globalThis.game),
+      loginSelect: Boolean(document.querySelector('select[name="userid"], select[name="user"]')),
+      hasPasswordField: Boolean(document.querySelector('input[type="password"]'))
+    })).catch(()=>({pathname:"unknown",gamePresent:false,loginSelect:false,hasPasswordField:false}));
+    const phase = status.pathname.endsWith("/setup") ? "SETUP_NOT_LAUNCHED" :
+                  status.pathname.endsWith("/join") ? "JOIN_NOT_COMPLETED" :
+                  status.pathname.endsWith("/game") ? "GAME_NOT_READY" : "OTHER";
+    console.log("Foundry diagnóstico seguro: fase="+phase+
+      " game="+status.gamePresent+" loginSelect="+status.loginSelect+
+      " passwordField="+status.hasPasswordField);
+    if (phase==="SETUP_NOT_LAUNCHED")
+      throw Error("Foundry muestra /setup: inicia Wicked Ones desde la pantalla de configuración antes de grabar.");
+    if (phase==="JOIN_NOT_COMPLETED")
+      throw Error("Foundry sigue en /join: revisar controles de acceso del formulario.");
+    throw Error("Foundry no ha cargado el mundo en 30 segundos (fase: "+phase+").");
+  }
 }
 async function verify(page, config, product) {
   await ready(page);
