@@ -12,7 +12,7 @@ import process from "node:process";
 const SCRIPT_ROOT = new URL(".", import.meta.url);
 const PROJECT_ROOT = resolve(new URL("../../", SCRIPT_ROOT).pathname);
 const SCENARIO_DIR = resolve(new URL("scenarios/", SCRIPT_ROOT).pathname);
-const CONFIRM = "YES_DEDICATED_DEMO_WORLD";
+const APPROVALS = new Set(["YES_DEDICATED_DEMO_WORLD", "YES_WICKED_ONES_VIEW_ONLY"]);
 
 function arg(name, fallback = undefined) {
   const index = process.argv.indexOf("--" + name);
@@ -47,8 +47,8 @@ async function scenarioFor(product) {
 }
 function configFromEnv() {
   const env=process.env;
-  expect(env.FOUNDRY_DEMO_APPROVED===CONFIRM,
-    "Falta FOUNDRY_DEMO_APPROVED=YES_DEDICATED_DEMO_WORLD. Nunca apuntes a una partida real.");
+  expect(APPROVALS.has(env.FOUNDRY_DEMO_APPROVED),
+    "El acceso requiere la autorización explícita del mundo seleccionado.");
   const urlString=env.FOUNDRY_DEMO_URL;
   expect(urlString, "Falta FOUNDRY_DEMO_URL.");
   let url;
@@ -58,29 +58,34 @@ function configFromEnv() {
     "Sólo se acepta HTTPS o HTTP local; no se envían contraseñas por HTTP remoto.");
   expect(!url.username && !url.password && !url.hash,
     "La URL no puede contener credenciales ni fragmentos.");
-  expect(env.FOUNDRY_DEMO_WORLD_ID, "Falta FOUNDRY_DEMO_WORLD_ID para impedir grabar otro mundo.");
-  expect(env.FOUNDRY_DEMO_GM_USER, "Falta FOUNDRY_DEMO_GM_USER.");
-  expect(env.FOUNDRY_DEMO_GM_PASSWORD !== undefined,
-    "Falta FOUNDRY_DEMO_GM_PASSWORD (el usuario de pruebas debe tener contraseña).");
+  const isExisting = env.FOUNDRY_DEMO_APPROVED === "YES_WICKED_ONES_VIEW_ONLY";
+  const worldTitle = (env.FOUNDRY_DEMO_WORLD_TITLE || (isExisting ? "Wicked Ones" : "")).trim();
+  const worldId = (env.FOUNDRY_DEMO_WORLD_ID || "").trim();
+  expect(worldTitle || worldId, "Configura el título o el ID del mundo autorizado.");
+  const user = (env.FOUNDRY_DEMO_GM_USER || (isExisting ? "Gamemaster" : "")).trim();
+  expect(user, "Falta el usuario GM.");
   return {
-    url:url.href, user:env.FOUNDRY_DEMO_GM_USER,
-    pass:env.FOUNDRY_DEMO_GM_PASSWORD,
-    world:env.FOUNDRY_DEMO_WORLD_ID,
+    url:url.href, user,
+    pass:env.FOUNDRY_DEMO_GM_PASSWORD || "",
+    world:worldId, worldTitle, mode:isExisting ? "existing-read-only" : "dedicated-demo",
   };
 }
 async function ready(page) {
   await page.waitForFunction(() => Boolean(globalThis.game?.ready), null, {timeout:45000});
 }
-async function verify(page, expectedWorld, product) {
+async function verify(page, config, product) {
   await ready(page);
   const state=await page.evaluate((product)=>({
     world:globalThis.game?.world?.id,
+    worldTitle:globalThis.game?.world?.title,
     gm:globalThis.game?.user?.isGM,
     moduleActive:globalThis.game?.modules?.get(product)?.active === true,
     moduleVersion:globalThis.game?.modules?.get(product)?.version || ""
   }), product);
-  expect(state.world===expectedWorld,
-    "Mundo incorrecto: se cancela la grabación para proteger tus otras partidas.");
+  if (config.world) expect(state.world===config.world,
+    "El ID del mundo no coincide: se cancela la grabación.");
+  if (config.worldTitle) expect(state.worldTitle===config.worldTitle,
+    "El título del mundo no coincide: se cancela la grabación.");
   expect(state.gm, "La cuenta seleccionada no es un GM del mundo de demostración.");
   expect(state.moduleActive, "El módulo objetivo no está activo en el mundo de demostración.");
   return state;
@@ -95,8 +100,8 @@ async function login(page, config) {
     expect(await selector.count(), "La pantalla de acceso no tiene selector de usuario.");
     await selector.selectOption({label:config.user});
     const password=form.locator("input[name=password],input[type=password]").first();
-    expect(await password.count(), "No se encuentra el campo de contraseña de Foundry.");
-    await password.fill(config.pass);
+    if (await password.count()) await password.fill(config.pass);
+    else expect(!config.pass, "No se encuentra el campo de contraseña de Foundry.");
     const submit=form.locator("button[type=submit],input[type=submit]").first();
     expect(await submit.count(), "No se encuentra el botón de acceso a Foundry.");
     await submit.click();
@@ -105,6 +110,9 @@ async function login(page, config) {
 }
 async function maybeSetupExample(page, product) {
   if (!flag("prepare-example")) return;
+  // Existing campaigns may contain real users or scenes: never create example data there.
+  expect(process.env.FOUNDRY_DEMO_APPROVED==="YES_DEDICATED_DEMO_WORLD",
+    "No se puede instalar el ejemplo ni activar escenas en Wicked Ones.");
   expect(process.env.FOUNDRY_DEMO_ALLOW_SETUP==="YES",
     "Instalar el ejemplo modifica el mundo. Autoriza FOUNDRY_DEMO_ALLOW_SETUP=YES.");
   expect(product==="mr-direccion", "Sólo está preparado el ejemplo de MR · Dirección.");
@@ -163,7 +171,7 @@ async function main() {
     const authContext=await browser.newContext({viewport:{width:1600,height:900}});
     const authPage=await authContext.newPage();
     await login(authPage,config);
-    const verified=await verify(authPage,config.world,product);
+    const verified=await verify(authPage,config,product);
     version=verified.moduleVersion;
     await maybeSetupExample(authPage,product);
     const state=await authContext.storageState();
@@ -177,7 +185,7 @@ async function main() {
     });
     const page=await recording.newPage();
     await page.goto(config.url,{waitUntil:"domcontentloaded",timeout:45000});
-    await verify(page,config.world,product);
+    await verify(page,config,product);
     actions=await playScenario(page,scenario);
     videoPath=await page.video().path();
     await recording.close();
@@ -187,7 +195,7 @@ async function main() {
     // Do not persist cookies, credentials, server URL or world name.
     await writeFile(resolve(outputDir,product+"-capture.json"),JSON.stringify({
       product,version,actions,recording:"real_foundry",human_review_required:true,
-      published:false,source:"read-only browser interactions, dedicated world"
+      published:false,source:"read-only browser interactions, approved world"
     },null,2)+"\n");
     console.log("CAPTURA REAL COMPLETADA:",output,"versión",version,"interacciones",actions);
   } catch (error) {
