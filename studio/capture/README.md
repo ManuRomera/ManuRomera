@@ -2,7 +2,11 @@
 
 El grabador ya tiene dos modos: **Wicked Ones (mundo existente, sólo demostración visual)** y **mundo demo independiente**. Ambos requieren una ejecución manual y generan borradores; **nunca publican vídeos ni cambian contraseñas**.
 
-## La opción sencilla: aprovechar Wicked Ones
+## La opción sencilla: aprovechar Wicked Ones en Foundry v13
+
+**Instancia correcta: Foundry VTT v13, no v12.** Introduce la dirección de tu instancia **v13** como valor del secreto `FOUNDRY_DEMO_URL`; no uses la dirección antigua. Por seguridad, la dirección no se guarda en los archivos públicos del repositorio. El grabador verifica la versión real de Foundry y **rechaza v12 automáticamente**, incluso si se ha configurado una URL equivocada.
+
+
 
 El modo existente usa el mundo ya autorizado y comprueba su título exacto antes de grabar; no instala contenidos ni activa escenas. El usuario se configura internamente o mediante Actions Secrets.
 
@@ -13,7 +17,7 @@ Abre [Settings → Secrets and variables → Actions](https://github.com/ManuRom
 | Campo de GitHub | Qué introducir |
 |---|---|
 | **Name** | `FOUNDRY_DEMO_URL` |
-| **Secret** | La URL HTTPS de tu servidor Foundry, la que utilizas para entrar en Oracle Cloud |
+| **Secret** | La URL HTTPS de la **instancia Foundry v13** (no la antigua v12). Si `FOUNDRY_DEMO_URL` ya existe, usa **Update** para sustituir el valor |
 
 Pulsa **Add secret**. El valor queda almacenado de forma cifrada para Actions y no se publica en el README ni en el código. GitHub no lo permite volver a visualizar en claro desde la web.
 
@@ -52,6 +56,7 @@ El workflow usa los valores del escenario autorizado. Configura contraseñas med
 
 El capturador valida **después de entrar y antes de realizar ninguna acción grabada**:
 
+- `game.version` debe indicar la **versión mayor 13**; si es v12 se aborta antes de grabar.
 - `game.world.title` debe coincidir exactamente con el mundo autorizado.
 - `game.user.isGM` debe ser verdadero.
 - MR · Dirección debe estar activo.
