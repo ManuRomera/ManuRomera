@@ -8,6 +8,11 @@ on:
       - ".github/workflows/mr-studio-capture.yml"
   workflow_dispatch:
     inputs:
+      use_wicked_ones:
+        description: "Autorizo grabación de la interfaz existente de Wicked Ones sin modificar escenas"
+        type: boolean
+        required: true
+        default: false
       prepare_demo_example:
         description: "Instalar/actualizar ejemplo sólo en el mundo demo autorizado"
         type: boolean
@@ -77,10 +82,11 @@ jobs:
     env:
       FOUNDRY_DEMO_URL: ${{ secrets.FOUNDRY_DEMO_URL }}
       FOUNDRY_DEMO_WORLD_ID: ${{ secrets.FOUNDRY_DEMO_WORLD_ID }}
-      FOUNDRY_DEMO_GM_USER: ${{ secrets.FOUNDRY_DEMO_GM_USER }}
+      FOUNDRY_DEMO_WORLD_TITLE: ${{ inputs.use_wicked_ones && 'Wicked Ones' || secrets.FOUNDRY_DEMO_WORLD_TITLE }}
+      FOUNDRY_DEMO_GM_USER: ${{ secrets.FOUNDRY_DEMO_GM_USER || 'Gamemaster' }}
       FOUNDRY_DEMO_GM_PASSWORD: ${{ secrets.FOUNDRY_DEMO_GM_PASSWORD }}
-      FOUNDRY_DEMO_APPROVED: ${{ secrets.FOUNDRY_DEMO_APPROVED }}
-      FOUNDRY_DEMO_ALLOW_SETUP: ${{ inputs.prepare_demo_example && 'YES' || 'NO' }}
+      FOUNDRY_DEMO_APPROVED: ${{ inputs.use_wicked_ones && 'YES_WICKED_ONES_VIEW_ONLY' || secrets.FOUNDRY_DEMO_APPROVED }}
+      FOUNDRY_DEMO_ALLOW_SETUP: ${{ inputs.use_wicked_ones && 'NO' || inputs.prepare_demo_example && 'YES' || 'NO' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -91,10 +97,19 @@ jobs:
           python-version: "3.12"
       - name: Verificar configuración del mundo de demostración
         run: |
-          for k in FOUNDRY_DEMO_URL FOUNDRY_DEMO_WORLD_ID FOUNDRY_DEMO_GM_USER FOUNDRY_DEMO_GM_PASSWORD FOUNDRY_DEMO_APPROVED; do
-            if [ -z "${!k}" ]; then echo "::error::Falta el secreto $k"; exit 1; fi
-          done
-          test "$FOUNDRY_DEMO_APPROVED" = "YES_DEDICATED_DEMO_WORLD"
+          if [ -z "$FOUNDRY_DEMO_URL" ]; then
+            echo "::error::Falta FOUNDRY_DEMO_URL (Actions secret)."
+            exit 1
+          fi
+          case "$FOUNDRY_DEMO_APPROVED" in
+            YES_WICKED_ONES_VIEW_ONLY)
+              test "$FOUNDRY_DEMO_ALLOW_SETUP" = "NO" ;;
+            YES_DEDICATED_DEMO_WORLD)
+              test -n "$FOUNDRY_DEMO_WORLD_ID" -o -n "$FOUNDRY_DEMO_WORLD_TITLE" ;;
+            *)
+              echo "::error::Falta autorizar un mundo válido."
+              exit 1 ;;
+          esac
       - name: Instalar navegador y códecs
         working-directory: studio/capture
         run: |
