@@ -48,6 +48,9 @@ jobs:
         run: |
           node --check studio/capture/capture.mjs
           node studio/capture/capture.mjs --validate-only --product mr-direccion
+          FOUNDRY_DEMO_URL=https://example.invalid/ \
+          FOUNDRY_DEMO_APPROVED=YES_WICKED_ONES_VIEW_ONLY \
+          node studio/capture/capture.mjs --check-config-only --product mr-direccion
           python -m py_compile scripts/mr_studio_live_render.py
       - name: Probar exportador con un vídeo sintético sólo para CI
         run: |
