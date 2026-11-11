@@ -126,7 +126,7 @@ async function maybeSetupExample(page, product) {
   });
   await page.waitForTimeout(2500);
 }
-async function playScenario(page, scenario) {
+async function playScenario(page, scenario, minActions=2) {
   await page.locator(scenario.requiredSelector).waitFor({state:"visible",timeout:20000});
   let successes=0;
   for (const step of scenario.steps) {
@@ -146,7 +146,7 @@ async function playScenario(page, scenario) {
       console.log("Paso opcional omitido:",step.label);
     }
   }
-  expect(successes>=2,"La demostración no contiene suficientes interacciones reales.");
+  expect(successes>=minActions,"La demostración no contiene suficientes interacciones reales.");
   return successes;
 }
 async function main() {
@@ -191,7 +191,7 @@ async function main() {
     const page=await recording.newPage();
     await page.goto(config.url,{waitUntil:"domcontentloaded",timeout:45000});
     await verify(page,config,product);
-    actions=await playScenario(page,scenario);
+    actions=await playScenario(page,scenario,config.mode==="existing-read-only"?1:2);
     videoPath=await page.video().path();
     await recording.close();
     recording=null;
