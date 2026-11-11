@@ -120,6 +120,11 @@ async function verify(page, config, product) {
 }
 async function login(page, config) {
   await page.goto(config.url, {waitUntil:"domcontentloaded",timeout:45000});
+  const view=await page.evaluate(()=>String(globalThis.game?.view || ""));
+  if(view==="auth") throw Error(
+    "El servidor muestra autenticación de administración (auth). "+
+    "Abre Foundry, entra en la pantalla de configuración e inicia Wicked Ones primero."
+  );
   const form=page.locator(
     "#join-game-form, form#join-form, form:has(select[name=userid]), form:has(select[name=user])"
   ).first();
