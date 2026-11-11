@@ -4,7 +4,7 @@ El grabador ya tiene dos modos: **Wicked Ones (mundo existente, sólo demostraci
 
 ## La opción sencilla: aprovechar Wicked Ones
 
-Ya existe el mundo **Wicked Ones** con **MR · Dirección** instalado y el usuario **Gamemaster**. No necesitas crear otro mundo ni buscar el ID interno. Este modo comprueba el título exacto del mundo antes de grabar y no instala contenidos ni activa escenas.
+El modo existente usa el mundo ya autorizado y comprueba su título exacto antes de grabar; no instala contenidos ni activa escenas. El usuario se configura internamente o mediante Actions Secrets.
 
 ### 1. Un secreto privado de GitHub (NO es una publicación)
 
@@ -17,9 +17,9 @@ Abre [Settings → Secrets and variables → Actions](https://github.com/ManuRom
 
 Pulsa **Add secret**. El valor queda almacenado de forma cifrada para Actions y no se publica en el README ni en el código. GitHub no lo permite volver a visualizar en claro desde la web.
 
-**Para este modo no es necesario configurar los otros cuatro secretos antiguos**: el flujo ya sabe que el mundo se llama Wicked Ones y que el usuario es Gamemaster. Si no tiene contraseña, el campo puede estar vacío. Si después le pones una contraseña (recomendado), guárdala como segundo secreto `FOUNDRY_DEMO_GM_PASSWORD` y no la compartas por chat.
+**Para este modo no es necesario buscar el ID interno del mundo**. La cuenta se configura en el workflow; si tiene contraseña, guárdala como segundo secreto `FOUNDRY_DEMO_GM_PASSWORD` y no la compartas por chat.
 
-> ⚠️ **Protege la cuenta Gamemaster.** Foundry advierte que las cuentas GM sin contraseña permiten acceder a la configuración del mundo a cualquiera que llegue a la pantalla de acceso. La documentación oficial recomienda establecer contraseñas: https://foundryvtt.com/article/users/
+> ⚠️ **Protege la cuenta Gamemaster.** Foundry advierte que las cuentas GM deben protegerse con contraseña, especialmente en servidores accesibles por Internet. La documentación oficial recomienda establecer contraseñas: https://foundryvtt.com/article/users/
 
 ### 2. Botón para grabar
 
@@ -46,13 +46,13 @@ export FOUNDRY_DEMO_APPROVED=YES_WICKED_ONES_VIEW_ONLY
 node capture.mjs --product mr-direccion --out output
 ```
 
-El script utiliza por defecto `Wicked Ones` y `Gamemaster` en ese modo. Si la contraseña sigue vacía, no hay que definirla.
+El workflow usa los valores del escenario autorizado. Configura contraseñas mediante secretos si corresponde; nunca las añadas a archivos del repositorio.
 
 ## Cómo se evita grabar otra partida o cambiar Wicked Ones
 
 El capturador valida **después de entrar y antes de realizar ninguna acción grabada**:
 
-- `game.world.title` debe ser exactamente **Wicked Ones**.
+- `game.world.title` debe coincidir exactamente con el mundo autorizado.
 - `game.user.isGM` debe ser verdadero.
 - MR · Dirección debe estar activo.
 - Sólo permite clics/hover en controles de MR · Dirección definidos en el escenario, no macros externas.
