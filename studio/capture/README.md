@@ -25,7 +25,13 @@ Pulsa **Add secret**. El valor queda almacenado de forma cifrada para Actions y 
 
 > ⚠️ **Protege la cuenta Gamemaster.** Foundry advierte que las cuentas GM deben protegerse con contraseña, especialmente en servidores accesibles por Internet. La documentación oficial recomienda establecer contraseñas: https://foundryvtt.com/article/users/
 
-### 2. Botón para grabar
+### 2. Antes de grabar: inicia Wicked Ones
+
+La prueba real del 11 de noviembre confirmó que Foundry estaba en la pantalla de **autenticación de administración** (`game.view = auth`), y no tenía un mundo activo (`game.world` vacío). Esta pantalla no permite entrar como Gamemaster.
+
+Abre Foundry v13, autentícate en su **administración**, busca el mundo **Wicked Ones** y pulsa **Launch World / Iniciar mundo**. Cuando veas el selector de jugadores con Gamemaster, la grabadora podrá conectarse. No compartas aquí ni en GitHub la contraseña de administración. La grabadora no inicia ni modifica mundos automáticamente.
+
+### 3. Botón para grabar
 
 Abre [Actions → MR Studio · Captura real de Foundry](https://github.com/ManuRomera/ManuRomera/actions/workflows/mr-studio-capture.yml) y pulsa **Run workflow**.
 
