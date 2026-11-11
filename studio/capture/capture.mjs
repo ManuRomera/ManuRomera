@@ -179,8 +179,10 @@ async function login(page, config) {
       : /denied|forbidden|unauthorized|autoriz/.test(rawMessage)
         ? "ACCESS_DENIED" : "UNCLASSIFIED";
   const hasRedirect=typeof answer?.redirect==="string" && answer.redirect.length>0;
+  const statusTag=(typeof answer?.status==="string" ? answer.status : String(answer?.status ?? "none"))
+    .replace(/[^A-Za-z0-9_-]/g,"").slice(0,30);
   console.log("Foundry entrada: "+(result ? ("HTTP "+result.status()) : "sin respuesta POST observada")+
-    " redirect="+hasRedirect+" category="+reason+
+    " redirect="+hasRedirect+" category="+reason+" statusTag="+statusTag+
     " responseFields="+(answer && typeof answer==="object" ? Object.keys(answer).filter(k=>["redirect","message","error","status","success"].includes(k)).join(",") : "none"));
   if(hasRedirect) {
     const destination=new URL(answer.redirect,config.url);
@@ -188,9 +190,19 @@ async function login(page, config) {
     if(destination.origin!==home.origin || !destination.pathname.endsWith("/game")) {
       throw Error("El servidor ofrece una redirección fuera del destino Foundry esperado.");
     }
-    // Follow a confirmed same-origin Foundry game redirect explicitly if the
-    // Join application fails to navigate the browser after its POST.
-    await page.goto(destination.href,{waitUntil:"domcontentloaded",timeout:45000});
+    // Foundry joins by asynchronously updating localStorage and navigating
+    // from its form handler. Give it time to finish before manual fallback.
+    const navigated=await page.waitForURL(url=>{
+      try {return new URL(url).pathname.endsWith("/game");}catch{return false;}
+    },{timeout:12000}).then(()=>true).catch(()=>false);
+    const storedUser=await page.evaluate(()=>Boolean(localStorage.getItem("fvtt-current-user"))).catch(()=>false);
+    const cookieCount=(await page.context().cookies()).length;
+    console.log("Foundry sesión: redirectObserved="+navigated+
+      " storedUser="+storedUser+" cookieCount="+cookieCount+
+      " page="+(new URL(page.url()).pathname.endsWith("/game")?"game":"not-game"));
+    if(!navigated && !page.url().endsWith("/game")) {
+      await page.goto(destination.href,{waitUntil:"domcontentloaded",timeout:45000});
+    }
   } else if(result) {
     const occupied=await page.evaluate(name=>
       Boolean(globalThis.game?.users?.contents?.find?.(u=>u.name===name)?.active)
