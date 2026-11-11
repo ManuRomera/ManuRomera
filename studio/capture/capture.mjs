@@ -123,23 +123,42 @@ async function login(page, config) {
   const view=await page.evaluate(()=>String(globalThis.game?.view || ""));
   if(view==="auth") throw Error(
     "El servidor muestra autenticación de administración (auth). "+
-    "Abre Foundry, entra en la pantalla de configuración e inicia Wicked Ones primero."
+    "Inicia Wicked Ones desde la configuración de Foundry antes de grabar."
   );
-  const form=page.locator(
-    "#join-game-form, form#join-form, form:has(select[name=userid]), form:has(select[name=user])"
+  if(view==="game") {await ready(page);return;}
+  // Foundry v13 renders its user picker inside an ApplicationV2 container,
+  // which is not necessarily a <form>. Query the controls themselves.
+  const selector=page.locator(
+    'select[name="userid"], select[name="userId"], select[name="user"]'
   ).first();
-  // Foundry v13 may mount its join form asynchronously after DOMContentLoaded.
-  await form.waitFor({state:"visible",timeout:10000}).catch(()=>{});
-  if (await form.isVisible().catch(()=>false)) {
-    const selector=form.locator("select[name=userid],select[name=user],select").first();
-    expect(await selector.count(), "La pantalla de acceso no tiene selector de usuario.");
-    await selector.selectOption({label:config.user});
-    const password=form.locator("input[name=password],input[type=password]").first();
-    if (await password.count()) await password.fill(config.pass);
-    else expect(!config.pass, "No se encuentra el campo de contraseña de Foundry.");
-    const submit=form.locator("button[type=submit],input[type=submit]").first();
-    expect(await submit.count(), "No se encuentra el botón de acceso a Foundry.");
-    await submit.click();
+  try {
+    await selector.waitFor({state:"visible",timeout:15000});
+  } catch {
+    throw Error("No se encuentra el selector de usuarios visible de Foundry v13.");
+  }
+  const choices=await selector.locator("option").allTextContents();
+  if(!choices.some(name=>name.trim()===config.user)) {
+    throw Error("El usuario GM configurado no figura en la pantalla de entrada.");
+  }
+  await selector.selectOption({label:config.user,timeout:8000});
+  const password=page.locator(
+    'input[name="password"], input[type="password"]'
+  ).first();
+  if(await password.count()) await password.fill(config.pass);
+  else expect(!config.pass, "No se encuentra el campo de contraseña.");
+
+  const submit=page.locator(
+    '#join-game button[type="submit"], #join-form button[type="submit"],'+
+    'button[name="join"], button[data-action="join"], button#join, form button[type="submit"]'
+  ).first();
+  if(await submit.isVisible().catch(()=>false)) {
+    await submit.click({timeout:8000});
+  } else {
+    const byText=page.getByRole("button", {name:/join|unirse|entrar|iniciar sesión/i}).first();
+    if(!await byText.isVisible().catch(()=>false)) {
+      throw Error("No se encuentra el botón de entrada a Foundry.");
+    }
+    await byText.click({timeout:8000});
   }
   await ready(page);
 }
