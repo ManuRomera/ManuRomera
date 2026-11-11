@@ -77,15 +77,20 @@ async function ready(page) {
     const status = await page.evaluate(() => ({
       pathname: new URL(window.location.href).pathname.toLowerCase(),
       gamePresent: Boolean(globalThis.game),
+      gameView: String(globalThis.game?.view || ""),
+      worldPresent: Boolean(globalThis.game?.world),
       loginSelect: Boolean(document.querySelector('select[name="userid"], select[name="user"]')),
-      hasPasswordField: Boolean(document.querySelector('input[type="password"]'))
-    })).catch(()=>({pathname:"unknown",gamePresent:false,loginSelect:false,hasPasswordField:false}));
-    const phase = status.pathname.endsWith("/setup") ? "SETUP_NOT_LAUNCHED" :
-                  status.pathname.endsWith("/join") ? "JOIN_NOT_COMPLETED" :
-                  status.pathname.endsWith("/game") ? "GAME_NOT_READY" : "OTHER";
-    console.log("Foundry diagnóstico seguro: fase="+phase+
-      " game="+status.gamePresent+" loginSelect="+status.loginSelect+
-      " passwordField="+status.hasPasswordField);
+      hasPasswordField: Boolean(document.querySelector('input[type="password"]')),
+      setupUI: Boolean(document.querySelector('#setup, #setup-app, #setup-menu, #worlds')),
+      joinUI: Boolean(document.querySelector('#join-game, #join-game-form, #join-form'))
+    })).catch(()=>({pathname:"unknown",gamePresent:false,gameView:"",worldPresent:false,loginSelect:false,hasPasswordField:false,setupUI:false,joinUI:false}));
+    const phase = status.gameView==="setup" || status.pathname.endsWith("/setup") ? "SETUP_NOT_LAUNCHED" :
+                  status.gameView==="join" || status.pathname.endsWith("/join") ? "JOIN_NOT_COMPLETED" :
+                  status.gameView==="game" || status.pathname.endsWith("/game") ? "GAME_NOT_READY" : "OTHER";
+    console.log("Foundry diagnóstico seguro: fase="+phase+" gameView="+status.gameView+
+      " game="+status.gamePresent+" world="+status.worldPresent+
+      " setupUI="+status.setupUI+" joinUI="+status.joinUI+
+      " loginSelect="+status.loginSelect+" passwordField="+status.hasPasswordField);
     if (phase==="SETUP_NOT_LAUNCHED")
       throw Error("Foundry muestra /setup: inicia Wicked Ones desde la pantalla de configuración antes de grabar.");
     if (phase==="JOIN_NOT_COMPLETED")
@@ -118,6 +123,8 @@ async function login(page, config) {
   const form=page.locator(
     "#join-game-form, form#join-form, form:has(select[name=userid]), form:has(select[name=user])"
   ).first();
+  // Foundry v13 may mount its join form asynchronously after DOMContentLoaded.
+  await form.waitFor({state:"visible",timeout:10000}).catch(()=>{});
   if (await form.isVisible().catch(()=>false)) {
     const selector=form.locator("select[name=userid],select[name=user],select").first();
     expect(await selector.count(), "La pantalla de acceso no tiene selector de usuario.");
