@@ -98,11 +98,12 @@ jobs:
               echo "::error::Falta autorizar un mundo válido."
               exit 1 ;;
           esac
-      - name: Instalar navegador y códecs
+      - name: Instalar Chromium headless mínimo
         working-directory: studio/capture
+        timeout-minutes: 6
         run: |
           npm install --no-audit --no-fund
-          npx playwright install --with-deps chromium
+          npx playwright install chromium --only-shell
       - name: Grabar demo real, excluyendo la pantalla de acceso
         run: |
           args=(--product mr-direccion --out studio/capture/output)
