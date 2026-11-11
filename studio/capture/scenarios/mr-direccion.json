@@ -11,7 +11,8 @@
       "label": "Mostrar selector de escenas",
       "action": "click",
       "selector": "#mr-direccion-bar details[data-menu='scenes'] > summary",
-      "holdMs": 1100
+      "holdMs": 1100,
+      "optional": true
     },
     {
       "label": "Previsualizar escena",
@@ -24,7 +25,8 @@
       "label": "Cerrar selector",
       "action": "click",
       "selector": "#mr-direccion-bar details[data-menu='scenes'] > summary",
-      "holdMs": 700
+      "holdMs": 700,
+      "optional": true
     },
     {
       "label": "Abrir motivos musicales",

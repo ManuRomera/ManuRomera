@@ -1,67 +1,74 @@
-# Captura real de MR · Dirección en Foundry
+# MR Studio · Grabaciones reales de Foundry
 
-El grabador abre **una instancia real de Foundry**, autentica un GM de pruebas **sin grabar el formulario de acceso**, comprueba el mundo de demostración y captura el funcionamiento visible de MR · Dirección. Produce borradores 9:16 y 16:9. **Nunca publica.**
+El grabador ya tiene dos modos: **Wicked Ones (mundo existente, sólo demostración visual)** y **mundo demo independiente**. Ambos requieren una ejecución manual y generan borradores; **nunca publican vídeos ni cambian contraseñas**.
 
-> [!IMPORTANT]
-> No conectarlo a tus partidas reales. Sólo a un mundo demo con personajes e imágenes que puedan mostrarse públicamente. Este repositorio de GitHub es público; por defecto el workflow **no adjunta los vídeos**.
+## La opción sencilla: aprovechar Wicked Ones
 
-## Preparación inicial (una vez)
+El modo existente usa el mundo ya autorizado y comprueba su título exacto antes de grabar; no instala contenidos ni activa escenas. El usuario se configura internamente o mediante Actions Secrets.
 
-1. En el Foundry v13 que tienes en Oracle Cloud, crea un **mundo nuevo dedicado** (por ejemplo MR Studio Demo) y activa MR · Dirección. Encontrarás el manifest de instalación en su repositorio. Evita interrumpir las partidas: una instancia de Foundry sólo aloja un mundo activo al mismo tiempo.
-2. Crea un **GM exclusivo de demostraciones con una contraseña distinta**. No reutilices la cuenta habitual.
-3. Anota el ID interno de ese mundo, que puedes consultar desde su consola como `game.world.id`.
-4. En **GitHub → ManuRomera/ManuRomera → Settings → Secrets and variables → Actions**, crea estos secretos:
+### 1. Un secreto privado de GitHub (NO es una publicación)
 
-   | Secreto | Valor |
-   |---|---|
-   | `FOUNDRY_DEMO_URL` | URL HTTPS de acceso al mundo demo |
-   | `FOUNDRY_DEMO_WORLD_ID` | El ID interno exacto del mundo |
-   | `FOUNDRY_DEMO_GM_USER` | Nombre visible del GM de pruebas |
-   | `FOUNDRY_DEMO_GM_PASSWORD` | Contraseña del GM de pruebas |
-   | `FOUNDRY_DEMO_APPROVED` | Literal `YES_DEDICATED_DEMO_WORLD` |
+Abre [Settings → Secrets and variables → Actions](https://github.com/ManuRomera/ManuRomera/settings/secrets/actions), y pulsa **New repository secret**:
 
-No compartas contraseñas por chat ni las pegues en GitHub Issues.
+| Campo de GitHub | Qué introducir |
+|---|---|
+| **Name** | `FOUNDRY_DEMO_URL` |
+| **Secret** | La URL HTTPS de tu servidor Foundry, la que utilizas para entrar en Oracle Cloud |
 
-## Grabar con un botón
+Pulsa **Add secret**. El valor queda almacenado de forma cifrada para Actions y no se publica en el README ni en el código. GitHub no lo permite volver a visualizar en claro desde la web.
 
-En **Actions → MR Studio · Captura real de Foundry → Run workflow**:
+**Para este modo no es necesario buscar el ID interno del mundo**. La cuenta se configura en el workflow; si tiene contraseña, guárdala como segundo secreto `FOUNDRY_DEMO_GM_PASSWORD` y no la compartas por chat.
 
-- Marca **Instalar/actualizar ejemplo** en la primera ejecución para instalar **La Posada del Cuervo**, a través de la API de tu propio módulo. El programa primero verifica que está dentro del mundo demo.
-- Marca **Adjuntar vídeos** sólo si el mundo de demostración no contiene datos privados y quieres descargar los resultados desde el repositorio público.
-- Ejecuta el flujo. Preparará el texto factual desde la release y dos teasers con movimiento real y una marca permanente de BORRADOR.
+> ⚠️ **Protege la cuenta Gamemaster.** Foundry advierte que las cuentas GM deben protegerse con contraseña, especialmente en servidores accesibles por Internet. La documentación oficial recomienda establecer contraseñas: https://foundryvtt.com/article/users/
 
-La sesión de acceso se hace fuera de la grabación. Los permisos/cookies se mantienen **en memoria**, sin guardarlos en el repositorio. El capturador verifica el mundo, el rol GM y la activación del módulo, y no actúa en caso de error.
+### 2. Botón para grabar
 
-## Qué graba
+Abre [Actions → MR Studio · Captura real de Foundry](https://github.com/ManuRomera/ManuRomera/actions/workflows/mr-studio-capture.yml) y pulsa **Run workflow**.
 
-`scenarios/mr-direccion.json` describe la secuencia: mostrar barra, abrir selector de escenas, previsualizar una escena, mostrar motivos, controles de figuras, mezcla y editor. Son acciones de interfaz auténticas, no pantallas inventadas. No se usan macros ni escrituras de datos durante la grabación. **Instalar el ejemplo** sí crea escenas, actores, diarios y sonidos, exclusivamente en el mundo autorizado y mediante una casilla opcional.
+- **Autorizo grabación de la interfaz existente de Wicked Ones** → marca esta casilla.
+- **Instalar/actualizar ejemplo** → **déjala desmarcada**: en Wicked Ones está deshabilitado para proteger los datos.
+- **Adjuntar vídeos** → inicialmente **déjala desmarcada**. El repositorio es público; si la marcas, otras personas con acceso a los artefactos de Actions podrían ver el vídeo. Sólo marca la casilla una vez revisado que el mundo no muestre usuarios, mensajes o datos privados.
 
-## Alternativa local
+La automatización abrirá la sesión, comprobará título del mundo y rol GM, navegará por los menús de MR · Dirección, generará una grabación real y montará dos previsualizaciones MP4 con marca **BORRADOR · NO PUBLICAR**.
 
-Si los ejecutores de GitHub no pueden alcanzar el servidor Oracle, puedes utilizarlo desde tu Mac, con Node 22:
+**Limitación:** si no adjuntas artefactos, el vídeo queda en el ejecutor temporal de Actions y no podrás descargarlo después. Para guardar de manera privada las tomas, usa un repositorio privado o el modo local.
 
-~~~bash
+### 3. ¿Y si prefieres que los vídeos se guarden en privado?
+
+Puedes ejecutar el mismo capturador en tu ordenador, con Node 22 y Playwright, y usar la salida local (incluye la grabación WebM original). No se suben contraseñas ni vídeos a GitHub. Desde la raíz del proyecto:
+
+```bash
 cd studio/capture
 npm install
 npx playwright install chromium
-# Carga las cinco variables desde tu gestor de secretos local.
+# Define FOUNDRY_DEMO_URL y FOUNDRY_DEMO_APPROVED de forma privada.
+export FOUNDRY_DEMO_APPROVED=YES_WICKED_ONES_VIEW_ONLY
 node capture.mjs --product mr-direccion --out output
-~~~
+```
 
-Para montar la campaña desde la raíz de este repositorio, con Python 3, Pillow, FFmpeg y ffprobe:
+El workflow usa los valores del escenario autorizado. Configura contraseñas mediante secretos si corresponde; nunca las añadas a archivos del repositorio.
 
-~~~bash
-python3 scripts/mr_studio.py --repo mr-direccion --force --out studio/output
-python3 scripts/mr_studio_live_render.py \
-  --capture studio/capture/output/mr-direccion-demo.webm \
-  --campaign studio/output/mr-direccion/v0.5.0/campaign.json
-~~~
+## Cómo se evita grabar otra partida o cambiar Wicked Ones
 
-Sustituye v0.5.0 por la versión de la release vigente cuando corresponda. No confirmes capturas ni claves al repositorio.
+El capturador valida **después de entrar y antes de realizar ninguna acción grabada**:
 
-## Estado y limitaciones
+- `game.world.title` debe coincidir exactamente con el mundo autorizado.
+- `game.user.isGM` debe ser verdadero.
+- MR · Dirección debe estar activo.
+- Sólo permite clics/hover en controles de MR · Dirección definidos en el escenario, no macros externas.
+- La opción `--prepare-example` **está prohibida** en el modo Wicked Ones.
 
-- **Pendiente de conexión real**: sin los cinco secretos y un mundo demo activo no es posible autenticar ni grabar tu Foundry.
-- La prueba de CI utiliza un vídeo sintético exclusivamente para verificar la tecnología de montaje; **no se presenta como vídeo real ni se distribuye**.
-- Los teasers son silenciosos y están marcados como BORRADOR; requieren revisión de derechos, contenido y privacidad antes de difundirlos.
-- La política de Foundry para sus listados oficiales exige que el material promocional sea de autoría humana. Los borradores automatizados de este sistema se destinan únicamente a campañas externas que cumplan las licencias y requisitos aplicables: https://foundryvtt.com/article/ai-policy/
+La sesión de autenticación se realiza en un contexto de navegador que no se graba. El vídeo se genera desde un contexto posterior. El script nunca guarda los secretos en los archivos de salida. Los vídeos sí podrían mostrar contenido privado de la escena actualmente activa, por lo que es imprescindible revisarlos antes de difundirlos.
+
+## Configuración avanzada: un mundo demo separado
+
+El modo original también está disponible para un mundo de demostración independiente. En ese caso configura los secretos `FOUNDRY_DEMO_URL`, `FOUNDRY_DEMO_WORLD_ID` (o `FOUNDRY_DEMO_WORLD_TITLE`), `FOUNDRY_DEMO_GM_USER`, `FOUNDRY_DEMO_GM_PASSWORD` y `FOUNDRY_DEMO_APPROVED` con valor `YES_DEDICATED_DEMO_WORLD`.
+
+Sólo en ese modo se permite marcar **Instalar/actualizar ejemplo**, que usa la API original del módulo para crear la Posada del Cuervo. El flujo de revisión sigue sin publicar nada por sí solo.
+
+## Estado real
+
+- El código y las pruebas de montaje están integrados.
+- La primera grabación en la instancia Oracle está **pendiente de configurar FOUNDRY_DEMO_URL y ejecutar Actions**.
+- Las pruebas técnicas utilizan vídeo sintético para verificar FFmpeg; no se hacen pasar por una grabación de Foundry.
+- Para promociones en listados oficiales de Foundry hay que cumplir [su política de IA](https://foundryvtt.com/article/ai-policy/). Las piezas automatizadas están destinadas a revisión y posibles campañas externas, no a publicación oficial automática.
