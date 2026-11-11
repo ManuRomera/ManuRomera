@@ -170,7 +170,34 @@ async function login(page, config) {
   },{timeout:12000}).catch(()=>null);
   await joinButton.click({timeout:8000});
   const result=await post;
-  console.log("Foundry: solicitud de entrada "+(result ? ("HTTP "+result.status()) : "sin POST /join observado"));
+  const answer=result ? await result.json().catch(()=>null) : null;
+  const rawMessage=String(answer?.message || answer?.error || "").toLowerCase();
+  const reason=/already|online|connected|in use|utilizad|conectad|sesión abierta/.test(rawMessage)
+    ? "ACCOUNT_OCCUPIED"
+    : /password|contraseña|access key|clave/.test(rawMessage)
+      ? "ACCESS_KEY_REJECTED"
+      : /denied|forbidden|unauthorized|autoriz/.test(rawMessage)
+        ? "ACCESS_DENIED" : "UNCLASSIFIED";
+  const hasRedirect=typeof answer?.redirect==="string" && answer.redirect.length>0;
+  console.log("Foundry entrada: "+(result ? ("HTTP "+result.status()) : "sin respuesta POST observada")+
+    " redirect="+hasRedirect+" category="+reason+
+    " responseFields="+(answer && typeof answer==="object" ? Object.keys(answer).filter(k=>["redirect","message","error","status","success"].includes(k)).join(",") : "none"));
+  if(hasRedirect) {
+    const destination=new URL(answer.redirect,config.url);
+    const home=new URL(config.url);
+    if(destination.origin!==home.origin || !destination.pathname.endsWith("/game")) {
+      throw Error("El servidor ofrece una redirección fuera del destino Foundry esperado.");
+    }
+    // Follow a confirmed same-origin Foundry game redirect explicitly if the
+    // Join application fails to navigate the browser after its POST.
+    await page.goto(destination.href,{waitUntil:"domcontentloaded",timeout:45000});
+  } else if(result) {
+    const occupied=await page.evaluate(name=>
+      Boolean(globalThis.game?.users?.contents?.find?.(u=>u.name===name)?.active)
+    ,config.user).catch(()=>false);
+    throw Error("Foundry no ha autorizado la entrada. Motivo="+reason+
+      " userAlreadyActive="+occupied+"; comprueba usuario y sesión actual.");
+  }
   await ready(page);
 }
 async function maybeSetupExample(page, product) {
