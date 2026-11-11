@@ -157,6 +157,11 @@ async function main() {
     return;
   }
   const config=configFromEnv();
+  if (flag("check-config-only")) {
+    console.log("Configuración válida: modo",config.mode,
+      "(sin conexión a servidor ni lectura de credenciales en los logs).");
+    return;
+  }
   const output=resolve(arg("out","studio/capture/output"),product+"-demo.webm");
   const outputDir=resolve(arg("out","studio/capture/output"));
   await mkdir(outputDir,{recursive:true});
