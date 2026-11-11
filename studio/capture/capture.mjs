@@ -147,19 +147,30 @@ async function login(page, config) {
   if(await password.count()) await password.fill(config.pass);
   else expect(!config.pass, "No se encuentra el campo de contraseña.");
 
-  const submit=page.locator(
-    '#join-game button[type="submit"], #join-form button[type="submit"],'+
-    'button[name="join"], button[data-action="join"], button#join, form button[type="submit"]'
-  ).first();
-  if(await submit.isVisible().catch(()=>false)) {
-    await submit.click({timeout:8000});
-  } else {
-    const byText=page.getByRole("button", {name:/join|unirse|entrar|iniciar sesión/i}).first();
-    if(!await byText.isVisible().catch(()=>false)) {
-      throw Error("No se encuentra el botón de entrada a Foundry.");
-    }
-    await byText.click({timeout:8000});
+  // Prefer the precise join action, never the separate 'Return to Setup'
+  // submit button which can be a sibling in Foundry V13.
+  let joinButton=page.getByRole("button",{
+    name:/join game session|join session|unirse a la partida|entrar en la partida|iniciar sesión/i
+  }).first();
+  if(!await joinButton.isVisible().catch(()=>false)) {
+    const joinForm=selector.locator("xpath=ancestor::form[1]");
+    joinButton=joinForm.locator('button[type="submit"], input[type="submit"]').first();
   }
+  if(!await joinButton.isVisible().catch(()=>false)) {
+    joinButton=page.locator(
+      '#join-game button[name="join"], button[data-action="join"], button#join-game, button#join'
+    ).first();
+  }
+  if(!await joinButton.isVisible().catch(()=>false)) {
+    throw Error("No se encuentra el botón de entrada al mundo; no se intenta otro botón.");
+  }
+  const post=page.waitForResponse(r=>{
+    try{return r.request().method()==="POST" && new URL(r.url()).pathname.endsWith("/join");}
+    catch{return false;}
+  },{timeout:12000}).catch(()=>null);
+  await joinButton.click({timeout:8000});
+  const result=await post;
+  console.log("Foundry: solicitud de entrada "+(result ? ("HTTP "+result.status()) : "sin POST /join observado"));
   await ready(page);
 }
 async function maybeSetupExample(page, product) {
