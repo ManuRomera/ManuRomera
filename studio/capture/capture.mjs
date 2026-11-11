@@ -79,6 +79,8 @@ async function ready(page) {
       gamePresent: Boolean(globalThis.game),
       gameView: String(globalThis.game?.view || ""),
       worldPresent: Boolean(globalThis.game?.world),
+      socketConnected: Boolean(globalThis.game?.socket?.connected),
+      webgl2: (()=>{try{return Boolean(document.createElement("canvas").getContext("webgl2"));}catch{return false;}})(),
       loginSelect: Boolean(document.querySelector('select[name="userid"], select[name="user"]')),
       hasPasswordField: Boolean(document.querySelector('input[type="password"]')),
       setupUI: Boolean(document.querySelector('#setup, #setup-app, #setup-menu, #worlds')),
@@ -89,6 +91,7 @@ async function ready(page) {
                   status.gameView==="game" || status.pathname.endsWith("/game") ? "GAME_NOT_READY" : "OTHER";
     console.log("Foundry diagnóstico seguro: fase="+phase+" gameView="+status.gameView+
       " game="+status.gamePresent+" world="+status.worldPresent+
+      " socketConnected="+status.socketConnected+" webgl2="+status.webgl2+
       " setupUI="+status.setupUI+" joinUI="+status.joinUI+
       " loginSelect="+status.loginSelect+" passwordField="+status.hasPasswordField);
     if (phase==="SETUP_NOT_LAUNCHED")
@@ -279,6 +282,24 @@ async function main() {
     // Login is NEVER included in the marketing video.
     const authContext=await browser.newContext({viewport:{width:1600,height:900}});
     const authPage=await authContext.newPage();
+    // Report only coarse navigation and connection states, never network URLs,
+    // cookies, page text, world content or credentials.
+    authPage.on("framenavigated",frame=>{
+      if(frame!==authPage.mainFrame())return;
+      const path=new URL(frame.url()).pathname;
+      console.log("Foundry navegación: "+(path.endsWith("/game")?"game":
+        path.endsWith("/join")?"join":path.endsWith("/setup")?"setup":"other"));
+    });
+    authPage.on("websocket",ws=>{
+      console.log("Foundry conexión WebSocket: creada");
+      ws.on("close",()=>console.log("Foundry conexión WebSocket: cerrada"));
+    });
+    authPage.on("pageerror",e=>{
+      const msg=String(e?.message||"");
+      const category=/webgl|canvas|renderer/i.test(msg)?"GRAPHICS":
+        /websocket|socket|network|connect/i.test(msg)?"NETWORK":"OTHER";
+      console.log("Foundry error del navegador: "+category);
+    });
     await login(authPage,config);
     const verified=await verify(authPage,config,product);
     version=verified.moduleVersion;
