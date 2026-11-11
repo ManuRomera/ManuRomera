@@ -1,9 +1,6 @@
 name: MR Studio · Captura real de Foundry
 
 on:
-  push:
-    branches: [main]
-    paths: [".github/workflows/mr-studio-capture.yml"]
   pull_request:
     paths:
       - "studio/capture/**"
@@ -61,17 +58,17 @@ jobs:
   real_foundry:
     name: Capturar DEMO Foundry (sólo bajo demanda)
     needs: validation
-    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && contains(github.event.head_commit.message, '[MR-STUDIO-ONE-SHOT]'))
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
       FOUNDRY_DEMO_URL: ${{ secrets.FOUNDRY_DEMO_URL }}
       FOUNDRY_DEMO_WORLD_ID: ${{ secrets.FOUNDRY_DEMO_WORLD_ID }}
-      FOUNDRY_DEMO_WORLD_TITLE: ${{ (github.event_name == 'push' || inputs.use_wicked_ones) && 'Wicked Ones' || secrets.FOUNDRY_DEMO_WORLD_TITLE }}
+      FOUNDRY_DEMO_WORLD_TITLE: ${{ inputs.use_wicked_ones && 'Wicked Ones' || secrets.FOUNDRY_DEMO_WORLD_TITLE }}
       FOUNDRY_DEMO_GM_USER: ${{ secrets.FOUNDRY_DEMO_GM_USER || 'Gamemaster' }}
       FOUNDRY_DEMO_GM_PASSWORD: ${{ secrets.FOUNDRY_DEMO_GM_PASSWORD }}
-      FOUNDRY_DEMO_APPROVED: ${{ (github.event_name == 'push' || inputs.use_wicked_ones) && 'YES_WICKED_ONES_VIEW_ONLY' || secrets.FOUNDRY_DEMO_APPROVED }}
-      FOUNDRY_DEMO_ALLOW_SETUP: ${{ (github.event_name == 'push' || inputs.use_wicked_ones) && 'NO' || inputs.prepare_demo_example && 'YES' || 'NO' }}
+      FOUNDRY_DEMO_APPROVED: ${{ inputs.use_wicked_ones && 'YES_WICKED_ONES_VIEW_ONLY' || secrets.FOUNDRY_DEMO_APPROVED }}
+      FOUNDRY_DEMO_ALLOW_SETUP: ${{ inputs.use_wicked_ones && 'NO' || inputs.prepare_demo_example && 'YES' || 'NO' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -124,7 +121,7 @@ jobs:
             dirname "$file"
           )/live-preview-vertical.mp4"
       - name: Entregar sólo material expresamente autorizado para revisión pública
-        if: github.event_name == 'workflow_dispatch' && inputs.upload_preview == true
+        if: inputs.upload_preview == true
         uses: actions/upload-artifact@v4
         with:
           name: mr-studio-foundry-demo-borrador
