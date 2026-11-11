@@ -78,6 +78,7 @@ async function verify(page, config, product) {
   const state=await page.evaluate((product)=>({
     world:globalThis.game?.world?.id,
     worldTitle:globalThis.game?.world?.title,
+    foundryVersion:globalThis.game?.version || globalThis.game?.release?.version || "",
     gm:globalThis.game?.user?.isGM,
     moduleActive:globalThis.game?.modules?.get(product)?.active === true,
     moduleVersion:globalThis.game?.modules?.get(product)?.version || ""
@@ -86,6 +87,8 @@ async function verify(page, config, product) {
     "El ID del mundo no coincide: se cancela la grabación.");
   if (config.worldTitle) expect(state.worldTitle===config.worldTitle,
     "El título del mundo no coincide: se cancela la grabación.");
+  const major = Number.parseInt(String(state.foundryVersion).replace(/^v/i, ""), 10);
+  expect(major===13, "Se requiere Foundry VTT v13; se ha detectado otra versión o no se ha podido verificar. Grabación cancelada.");
   expect(state.gm, "La cuenta seleccionada no es un GM del mundo de demostración.");
   expect(state.moduleActive, "El módulo objetivo no está activo en el mundo de demostración.");
   return state;
