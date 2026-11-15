@@ -9,9 +9,9 @@
  },
  "Sensa_Fine": {
   "con_archivos": true,
-  "descargas": 44
+  "descargas": 45
  },
- "_total": 2145,
+ "_total": 2197,
  "brindlewood-bay-foundry": {
   "con_archivos": true,
   "descargas": 112
@@ -38,7 +38,7 @@
  },
  "imserso-to-the-limit": {
   "con_archivos": true,
-  "descargas": 57
+  "descargas": 58
  },
  "los-abuelos-de-la-justicia": {
   "con_archivos": false,
@@ -70,11 +70,11 @@
  },
  "mr-cuentos-de-animas": {
   "con_archivos": true,
-  "descargas": 77
+  "descargas": 78
  },
  "mr-direccion": {
   "con_archivos": true,
-  "descargas": 105
+  "descargas": 108
  },
  "mr-doncella-escarcha": {
   "con_archivos": true,
@@ -82,11 +82,11 @@
  },
  "mr-eat-the-reich": {
   "con_archivos": true,
-  "descargas": 88
+  "descargas": 123
  },
  "mr-eidolon": {
   "con_archivos": true,
-  "descargas": 49
+  "descargas": 50
  },
  "mr-entre-ruinas": {
   "con_archivos": true,
@@ -94,7 +94,7 @@
  },
  "mr-kit-desguazador": {
   "con_archivos": true,
-  "descargas": 29
+  "descargas": 30
  },
  "mr-la-ultima-emision": {
   "con_archivos": true,
@@ -110,11 +110,11 @@
  },
  "mr-mothership-es": {
   "con_archivos": true,
-  "descargas": 79
+  "descargas": 80
  },
  "mr-nadir": {
   "con_archivos": true,
-  "descargas": 25
+  "descargas": 29
  },
  "mr-nosotras-las-brujas": {
   "con_archivos": true,
@@ -158,11 +158,11 @@
  },
  "mr-wages-of-sin": {
   "con_archivos": true,
-  "descargas": 34
+  "descargas": 35
  },
  "mr-wicked-ones-es": {
   "con_archivos": true,
-  "descargas": 70
+  "descargas": 71
  },
  "ocho-lanzas": {
   "con_archivos": true,
@@ -174,7 +174,7 @@
  },
  "party-corner-portraits-plus": {
   "con_archivos": true,
-  "descargas": 151
+  "descargas": 152
  },
  "pbpe-exportador": {
   "con_archivos": true,
@@ -206,6 +206,6 @@
  },
  "ysystem3-srd": {
   "con_archivos": true,
-  "descargas": 237
+  "descargas": 238
  }
 }
