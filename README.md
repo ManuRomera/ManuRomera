@@ -187,14 +187,6 @@
 <table>
   <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/ManuRomera/mr-reservoir-mice"><img src="./banners/mr-reservoir-mice.webp" alt="MR · Reservoir Mice" width="100%"></a>
-<br>
-<b>MR · Reservoir Mice</b><br>
-<sub>Thriller criminal de una sesión para Mausritter: seis ratones trajeados, un poli infiltrado y un duelo de miradas antes de medianoche.</sub><br>
-<sub><a href="https://github.com/ManuRomera/mr-reservoir-mice">Repositorio</a></sub><br>
-<img src="./badges/descargas-flat/mr-reservoir-mice.svg" alt="Descargas de MR · Reservoir Mice">
-</td>
-<td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-wages-of-sin"><img src="./banners/mr-wages-of-sin.webp" alt="MR · Wages of Sin" width="100%"></a>
 <br>
 <b>MR · Wages of Sin</b><br>
@@ -202,8 +194,6 @@
 <sub><a href="https://github.com/ManuRomera/mr-wages-of-sin">Repositorio</a></sub><br>
 <img src="./badges/descargas-flat/mr-wages-of-sin.svg" alt="Descargas de MR · Wages of Sin">
 </td>
-  </tr>
-  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-wicked-ones-es"><img src="./banners/mr-wicked-ones-es.webp" alt="MR · Wicked Ones" width="100%"></a>
 <br>
@@ -212,6 +202,8 @@
 <sub><a href="https://github.com/ManuRomera/mr-wicked-ones-es">Repositorio</a></sub><br>
 <img src="./badges/descargas-flat/mr-wicked-ones-es.svg" alt="Descargas de MR · Wicked Ones">
 </td>
+  </tr>
+  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-doncella-escarcha"><img src="./banners/mr-doncella-escarcha.webp" alt="MR · La Rima de la Doncella" width="100%"></a>
 <br>
@@ -220,8 +212,6 @@
 <sub><a href="https://github.com/ManuRomera/mr-doncella-escarcha">Repositorio</a></sub><br>
 <img src="./badges/descargas-flat/mr-doncella-escarcha.svg" alt="Descargas de MR · La Rima de la Doncella">
 </td>
-  </tr>
-  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-trono-de-la-sed"><img src="./banners/mr-trono-de-la-sed.webp" alt="MR · El Trono de la Sed" width="100%"></a>
 <br>
@@ -230,6 +220,8 @@
 <sub><a href="https://github.com/ManuRomera/mr-trono-de-la-sed">Repositorio</a></sub><br>
 <img src="./badges/descargas-flat/mr-trono-de-la-sed.svg" alt="Descargas de MR · El Trono de la Sed">
 </td>
+  </tr>
+  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-nadir"><img src="./banners/mr-nadir.webp" alt="MR · Nádir" width="100%"></a>
 <br>
@@ -238,8 +230,6 @@
 <sub><a href="https://github.com/ManuRomera/mr-nadir">Repositorio</a> · <a href="https://manuromera.github.io/mr-nadir/">Página</a></sub><br>
 <img src="./badges/descargas-flat/mr-nadir.svg" alt="Descargas de MR · Nádir">
 </td>
-  </tr>
-  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-eidolon"><img src="./banners/mr-eidolon.webp" alt="MR · EIDOLON" width="100%"></a>
 <br>
@@ -248,6 +238,8 @@
 <sub><a href="https://github.com/ManuRomera/mr-eidolon">Repositorio</a></sub><br>
 <img src="./badges/descargas-flat/mr-eidolon.svg" alt="Descargas de MR · EIDOLON">
 </td>
+  </tr>
+  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/mr-ultimo-descenso"><img src="./banners/mr-ultimo-descenso.webp" alt="MR · El Último Descenso" width="100%"></a>
 <br>
@@ -256,8 +248,6 @@
 <sub><a href="https://github.com/ManuRomera/mr-ultimo-descenso">Repositorio</a> · <a href="https://manuromera.github.io/mr-ultimo-descenso/">Página</a></sub><br>
 <img src="./badges/descargas-flat/mr-ultimo-descenso.svg" alt="Descargas de MR · El Último Descenso">
 </td>
-  </tr>
-  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/Sensa_Fine"><img src="./banners/Sensa_Fine.webp" alt="Sensa Fine" width="100%"></a>
 <br>
@@ -266,6 +256,8 @@
 <sub><a href="https://github.com/ManuRomera/Sensa_Fine">Repositorio</a></sub><br>
 <img src="./badges/descargas-flat/Sensa_Fine.svg" alt="Descargas de Sensa Fine">
 </td>
+  </tr>
+  <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ManuRomera/los-abuelos-de-la-justicia"><img src="./banners/los-abuelos-de-la-justicia.webp" alt="Los Abuelos de la Justicia" width="100%"></a>
 <br>
@@ -274,6 +266,7 @@
 <sub><a href="https://github.com/ManuRomera/los-abuelos-de-la-justicia">Repositorio</a></sub><br>
 <img src="./badges/descargas-flat/los-abuelos-de-la-justicia.svg" alt="Descargas de Los Abuelos de la Justicia">
 </td>
+<td width="50%"></td>
   </tr>
 </table>
 
