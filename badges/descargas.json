@@ -11,7 +11,7 @@
   "con_archivos": true,
   "descargas": 45
  },
- "_total": 2336,
+ "_total": 2359,
  "brindlewood-bay-foundry": {
   "con_archivos": true,
   "descargas": 112
@@ -106,7 +106,7 @@
  },
  "mr-mausritter-es": {
   "con_archivos": true,
-  "descargas": 4
+  "descargas": 12
  },
  "mr-mentira-cochina": {
   "con_archivos": true,
@@ -134,7 +134,11 @@
  },
  "mr-reservoir-mice": {
   "con_archivos": true,
-  "descargas": 16
+  "descargas": 17
+ },
+ "mr-simulacro-desatado": {
+  "con_archivos": true,
+  "descargas": 14
  },
  "mr-standee-portrait": {
   "con_archivos": true,
